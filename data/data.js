@@ -1,0 +1,23 @@
+export const data = [
+  "Asparagus",
+  "Beetroot",
+  "Broccoli",
+  "Cabbage", 
+  "Carrot", 
+  "Cauliflower", 
+  "Celery", 
+  "Corn", 
+  "Eggplant", 
+  "Lettuce", 
+  "Mushroom", 
+  "Onion", 
+  "Parsnip", 
+  "Pea", 
+  "Potato", 
+  "Pumpkin", 
+  "Radish", 
+  "Spinach",    
+  "Tomato", 
+  "Turnip", 
+  "Iggy Pope"
+];
