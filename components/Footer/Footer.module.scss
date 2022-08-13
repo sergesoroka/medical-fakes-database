@@ -1,0 +1,22 @@
+$primary-color: #3F4871;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 64px;
+  border-bottom: 2px solid $primary-color;
+  border-left: 2px solid $primary-color;
+  padding: 1rem;
+}
+.copyright {
+  font-size: 1.2rem;
+  color: $primary-color;
+}
+
+.icons {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+

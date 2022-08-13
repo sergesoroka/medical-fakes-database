@@ -1,34 +1,48 @@
-import styles from "./SearchAutoComplete.module.css";
 import useSearchAutoComplete from "./hooks/useSearchAutoComplete";
-import Suggestions from "./Suggestions";
+import styles from "./SearchAutoComplete.module.scss";
 
-import { SuggestionsType } from "../../types/dataTypes";
-import { data } from '../../data/data'
+import CardsLayout from "../Card/CardsLayout";
+import { FiX, FiSearch } from "react-icons/fi";
+import { tableData } from "../../data/tableData";
 
 const SearchAutoComplete = () => {
   const {
     handleChange,
     handleClick,
+    handleClear,
     value,
     suggestionsActive,
     suggestionIndex,
     suggestions,
-  } = useSearchAutoComplete({ data });
+  } = useSearchAutoComplete({ data: tableData });
 
   return (
     <div className={styles.searchWrap}>
+      <div className={styles.searchIcon}>
+        <FiSearch />
+      </div>
       <input
         type="text"
         value={value}
         onChange={handleChange}
-        // onKeyDown={handleKeyDown}
+        placeholder="Пошук фейків"
       />
-      {suggestionsActive && (
-        <Suggestions
+      <button className={styles.clearBtn} onClick={handleClear}>
+        <FiX />
+      </button>
+      {value && (
+        <>
+          <CardsLayout 
           handleClick={handleClick}
           suggestionIndex={suggestionIndex}
           suggestions={suggestions}
-        />
+          />
+          {/* <Suggestions
+            handleClick={handleClick}
+            suggestionIndex={suggestionIndex}
+            suggestions={suggestions}
+          /> */}
+        </>
       )}
     </div>
   );

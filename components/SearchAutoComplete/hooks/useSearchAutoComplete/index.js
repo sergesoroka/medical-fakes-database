@@ -10,12 +10,14 @@ const useSearchAutoComplete = ({ data }) => {
     const query = e.target.value.toLowerCase();
     setValue(query);
     if (query.length > 1) {
-      const filterSuggestions = data.filter(
-        (suggestion) => suggestion.toLowerCase().indexOf(query) > -1
-      );
-      console.log("filterSuggestions", filterSuggestions);
+      const filterSuggestionsTheme = data
+        .map((item) => item.theme)
+        .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
+      const filterSuggestionsSubTheme = data
+        .map((item) => item.subtheme)
+        .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
 
-      setSuggestions(filterSuggestions);
+      setSuggestions([...filterSuggestionsTheme, ...filterSuggestionsSubTheme]);
       setSuggestionsActive(true);
     } else {
       setSuggestionsActive(false);
@@ -28,12 +30,18 @@ const useSearchAutoComplete = ({ data }) => {
     setSuggestionsActive(false);
   };
 
+  const handleClear = () => {
+    setValue("")
+    setSuggestions([])
+  };
+
   return {
     suggestionsActive,
     suggestionIndex,
     value,
     handleChange,
     handleClick,
+    handleClear,
     suggestions,
   };
 };

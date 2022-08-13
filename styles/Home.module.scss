@@ -1,15 +1,16 @@
+$primary-color: #3F4871;
+
+
 .container {
-  padding: 0 2rem;
+  padding: 3rem;
+}
+.mainContent {
+  padding: 1rem;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 4rem;
 }
 
 .footer {
@@ -42,13 +43,20 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: $primary-color;
+ margin-bottom: .4rem;
+}
+.underline {
+  width: 310px;
+  height: 14px;
+  background: $primary-color;
+  display: inline-block;
+  margin-bottom: 3rem;
 }
 
-.title,
-.description {
-  text-align: center;
-}
+
 
 .description {
   margin: 4rem 0;
@@ -72,6 +80,7 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
+
 
 .card {
   margin: 1rem;

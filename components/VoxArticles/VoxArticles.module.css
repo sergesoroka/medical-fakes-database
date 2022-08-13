@@ -1,0 +1,39 @@
+.articlesWrap {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.articleWrap {
+  display: flex;
+  width: 50%;
+}
+.image {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.articleTitle {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.articleLink {
+  display: contents;
+}
+
+@media (max-width: 600px) {
+  .articlesWrap, .articleWrap {
+    width: 100%;
+    flex-direction: column;
+  }
+  .articleTitle {
+    margin: 1rem 0;
+    font-size: .9rem;
+  }
+  .image {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

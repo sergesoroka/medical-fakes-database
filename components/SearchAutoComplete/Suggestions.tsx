@@ -10,19 +10,19 @@ const Suggestions = ({
   handleClick: MouseEventHandler<HTMLLIElement>;
 }) => {
   return (
-    <ul className="suggestions">
+    <div className="suggestions">
       {suggestions.map((suggestion: string, index: number) => {
         return (
-          <li
+          <p
             className={index === suggestionIndex ? "active" : ""}
             key={index}
             onClick={handleClick}
           >
             {suggestion}
-          </li>
+          </p>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

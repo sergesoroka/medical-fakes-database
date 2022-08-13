@@ -1,0 +1,42 @@
+.cardWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  gap: 4rem;
+  margin-bottom: 16px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid #949494;
+}
+
+.card {
+  padding: 1.2rem 0;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.card:hover {
+  color: rgb(170, 0, 208);
+}
+
+.cardTitle {
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.cardExpanded {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  border: 1px solid black;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (max-width: 600px) {
+  .cardWrap {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
