@@ -1,7 +1,9 @@
+// @ts-ignore
 import React from "react";
 import Link from "next/link";
 import styles from "./Card.module.css";
 import Card from "./Card";
+import SectionLabel from "../SectionLabel/SectionLabel";
 import { tableData } from "../../data/tableData";
 
 const CardsLayout = ({
@@ -16,8 +18,7 @@ const CardsLayout = ({
   const renderedData = tableData.map((item, i) => {
     if (item.theme && !suggestions) {
       return (
-        <Link href={`/card/${item.id}`}>
-          <a>
+       
             <Card
               key={i}
               id={item.id}
@@ -25,8 +26,7 @@ const CardsLayout = ({
               theme={item.theme}
               subtheme={item.subtheme}
             />
-          </a>
-        </Link>
+        
       );
     }
   });
@@ -38,17 +38,15 @@ const CardsLayout = ({
         suggestions.includes(item.subtheme)
       ) {
         return (
-         <Link href={`/card/${item.id}`}>
-          <a>
-            <Card
-              key={i}
-              id={item.id}
-              source={item.source}
-              theme={item.theme}
-              subtheme={item.subtheme}
-            />
-          </a>
-        </Link>
+          
+              <Card key={i}
+                id={item.id}
+                source={item.source}
+                theme={item.theme}
+                subtheme={item.subtheme}
+              />
+           
+         
         );
       }
     }
@@ -56,6 +54,7 @@ const CardsLayout = ({
 
   return (
     <div className={styles.cardWrap}>
+      <SectionLabel label="fakes" />
       {suggestions ? renderedSearchData : renderedData}
     </div>
   );

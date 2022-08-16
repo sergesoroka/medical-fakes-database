@@ -5,8 +5,63 @@ $primary-color: #3F4871;
   padding: 3rem;
 }
 .mainContent {
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  gap: 4rem;
+  padding: 1.2rem;
+  margin-top: 6rem;
 }
+// single page styles
+.singlePageMainContent {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  gap: 4rem;
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+.textDiscript {
+  font-size: 18px;
+  line-height: 30px;
+  color: #4a4a4a;
+}
+.subtheme {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 50px;
+  color: #3F4871;
+  border-bottom: 2px solid #3F4871;
+  padding-bottom: 1rem;
+  margin: 0 0 1rem 4rem;
+}
+.theme {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #3F4871;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  margin-left: 4rem;
+  width: 50%;
+}
+.verdict {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #D12020;
+  margin: 3rem 0 0 4rem;
+}
+
+.proof {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #008A40;
+  margin: 3rem 0 0 4rem;
+}
+// end of single page styles
+
 
 .main {
   min-height: 100vh;
@@ -110,6 +165,10 @@ $primary-color: #3F4871;
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.media {
+  padding: 0;
 }
 
 .logo {

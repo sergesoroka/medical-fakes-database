@@ -1,41 +1,35 @@
-import React, { useState, useRef } from "react";
-import { toPng } from "html-to-image";
 import { useRouter } from "next/router";
-import Head from "next/head";
+import styles from "./../../styles/Home.module.scss";
+import TagsLayout from "../../components/Tag/TagsLayout";
+
+import { tableData } from "./../../data/tableData";
 
 function CartPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [imageUrl, setImageUrl] = useState("");
-  const ref = useRef(null);
 
-  const makeOgImage = () => {
-    if (ref.current === null) {
-      return;
+  const renderedPage = tableData.map((item, i) => {
+    if (item.id === id) {
+      return (
+        <>
+          <div>
+            <h3 className={styles.theme}>{item.theme}</h3>
+            <h2 className={styles.subtheme}>{item.subtheme}</h2>
+            <div style={{ marginLeft: "4rem" }}>
+              <TagsLayout />
+            </div>
+            <h4 className={styles.verdict}>{item.verdict}</h4>
+            <p className={styles.textDiscript}>{item.discription}</p>
+            <h4 className={styles.proof}>Як насправді?</h4>
+            <p className={styles.textDiscript}>{item.disproof}</p>
+          </div>
+          <div>39</div>
+        </>
+      );
     }
-    toPng(ref.current, { cacheBust: true })
-      .then((dataUrl) => {
-        const link = document.createElement("a");
-        // link.download = 'speakerName.png'
-        link.href = dataUrl;
+  });
 
-        setImageUrl(link.href);
-        link.click();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  return (
-    <>
-      <Head>
-        <meta property="og:image" content={imageUrl} />
-      </Head>
-      <div ref={ref}>CartPage: {id}</div>
-      <button onClick={makeOgImage}>Share</button>
-    </>
-  );
+  return <div className={styles.singlePageMainContent}>{renderedPage}</div>;
 }
 
 export default CartPage;

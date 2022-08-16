@@ -9,6 +9,7 @@ const Article = ({
   title,
   tags,
   authors,
+  articleId
 }: VoxDataType ) => {
   return (
     <>
@@ -18,8 +19,8 @@ const Article = ({
           <Image
             src={imagelink}
             alt={title}
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             style={{ width: "200px", height: "auto" }}
             layout="fixed"
           />

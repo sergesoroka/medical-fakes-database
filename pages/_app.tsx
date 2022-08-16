@@ -18,13 +18,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className={styles.container}>
         <Header />
         <GoogleAnalitics />
-        <main className={styles.mainContent}>
-          <Component {...pageProps} />
-        </main>
+        <Component {...pageProps} />
         <Footer />
       </div>
     </>
