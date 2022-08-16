@@ -1,6 +1,5 @@
 // @ts-ignore
 import React from "react";
-import Link from "next/link";
 import styles from "./Card.module.css";
 import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
@@ -54,6 +53,7 @@ const CardsLayout = ({
 
   return (
     <div className={styles.cardWrap}>
+      {/* @ts-ignore */}
       <SectionLabel label="fakes" />
       {suggestions ? renderedSearchData : renderedData}
     </div>

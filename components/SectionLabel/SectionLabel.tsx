@@ -8,8 +8,8 @@ import {
 } from "react-icons/bs";
 
 type labelType = { label: string };
-
-const SectionLabel = ({ label }: labelType) => {
+//@ts-ignore
+const SectionLabel: React.FC<labelType> = ({ label }: labelType) => {
   if (label === "video") {
     return (
       <div className={styles.labelWrap}>
