@@ -211,4 +211,13 @@ $primary-color: #3F4871;
     width: 100%;
     flex-direction: column;
   }
+  .container {
+    padding: 1rem;
+  }
+  .mainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: .6rem;
+  margin-top: 3rem;
+  }
 }
