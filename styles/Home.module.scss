@@ -21,10 +21,15 @@ $primary-color: #3F4871;
   padding: 1.2rem;
   margin-top: 3rem;
 }
+.articlesWrap {
+  display: flex;
+  gap: 4rem;
+}
 .textDiscript {
   font-size: 18px;
   line-height: 30px;
   color: #4a4a4a;
+  margin-bottom: 4rem;
 }
 .subtheme {
   font-size: 36px;
@@ -41,24 +46,49 @@ $primary-color: #3F4871;
   line-height: 20px;
   color: #3F4871;
   text-transform: uppercase;
-  padding-bottom: 1rem;
-  margin-left: 4rem;
+  margin-left: 0.4rem;
   width: 50%;
+
 }
 .verdict {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   color: #D12020;
-  margin: 3rem 0 0 4rem;
+  margin: .3rem 0 0 1rem;
 }
 
 .proof {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   color: #008A40;
-  margin: 3rem 0 0 4rem;
+  margin: .4rem 0 0 1rem;
+}
+
+.verdictWrap {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 0 1.6rem;
+}
+.themeSection {
+  display: flex;
+  align-items: center;
+  margin-left: -16px;
+}
+.arrowTheme {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #A6E1FA;
+  
+}
+.wordTheme {
+  height: 30px;
+    background-color: #A6E1FA;
+    font-weight: 600;
+    padding: 6px;
 }
 // end of single page styles
 

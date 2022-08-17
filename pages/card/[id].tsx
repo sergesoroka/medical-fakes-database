@@ -2,6 +2,9 @@ import { useRouter } from "next/router";
 import styles from "./../../styles/Home.module.scss";
 import TagsLayout from "../../components/Tag/TagsLayout";
 
+import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
+import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
+import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
 import { tableData } from "./../../data/tableData";
 
 function CartPage() {
@@ -13,15 +16,30 @@ function CartPage() {
       return (
         <>
           <div>
-            <h3 className={styles.theme}>{item.theme}</h3>
+            <div className={styles.themeSection}>
+            <div className={styles.wordTheme}>ТЕМА</div>
+            <div className={styles.arrowTheme}></div>
+              <h3 className={styles.theme}>{item.theme}</h3>
+            </div>
             <h2 className={styles.subtheme}>{item.subtheme}</h2>
             <div style={{ marginLeft: "4rem" }}>
               <TagsLayout />
             </div>
-            <h4 className={styles.verdict}>{item.verdict}</h4>
+            <div className={styles.verdictWrap}>
+              <FaHandPointUp style={{ color: "#D12020", fontSize: "1.4rem" }} />
+              <h4 className={styles.verdict}>{item.verdict}</h4>
+            </div>
             <p className={styles.textDiscript}>{item.discription}</p>
-            <h4 className={styles.proof}>Як насправді?</h4>
+            <div className={styles.verdictWrap}>
+              <FaThumbsUp style={{ color: "#008A40", fontSize: "1.2rem" }} />
+              <h4 className={styles.proof}>Як насправді?</h4>
+            </div>
             <p className={styles.textDiscript}>{item.disproof}</p>
+
+            <div className={styles.articlesWrap}>
+              {/* <YouTubeVideo /> */}
+              <VoxArticlesLayout />
+            </div>
           </div>
           <div>39</div>
         </>
