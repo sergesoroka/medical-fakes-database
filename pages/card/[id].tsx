@@ -24,6 +24,7 @@ function CartPage() {
             </div>
             <h2 className={styles.subtheme}>{item.subtheme}</h2>
             <div style={{ marginLeft: "4rem" }}>
+              {/* @ts-ignore */}
              {item.tags && <TagsLayout tags={item.tags}/>}
             </div>
             <div className={styles.verdictWrap}>
