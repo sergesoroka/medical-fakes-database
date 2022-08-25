@@ -1,11 +1,17 @@
+import Link from "next/link";
 import styles from "./Tag.module.scss";
 
-const Tag = ({ name, active }: { name: string; active: boolean }) => {
+const Tag = ({ tag }: { tag: string }) => {
   return (
-    <div className={styles.tagWrap}>
-      <div className={styles.tag}>#</div>
-      <div className={styles.tag}>{name}</div>
-    </div>
+    <Link href={`/tag/${tag}`}>
+      <a>
+        {" "}
+        <div className={styles.tagWrap}>
+          <div className={styles.tag}>#</div>
+          <div className={styles.tag}>{tag}</div>
+        </div>{" "}
+      </a>
+    </Link>
   );
 };
 

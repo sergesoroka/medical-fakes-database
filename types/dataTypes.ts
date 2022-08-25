@@ -39,4 +39,5 @@ export interface medicalFake {
   archive_link?: string;
   country?: string;
   disproof?: string;
+  tags?:  string
 }

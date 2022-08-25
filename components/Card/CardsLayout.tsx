@@ -24,6 +24,7 @@ const CardsLayout = ({
               source={item.source}
               theme={item.theme}
               subtheme={item.subtheme}
+              tags={item.tags}
             />
         
       );
@@ -43,6 +44,7 @@ const CardsLayout = ({
                 source={item.source}
                 theme={item.theme}
                 subtheme={item.subtheme}
+                tags={item.tags}
               />
            
          

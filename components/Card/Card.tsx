@@ -4,7 +4,7 @@ import { medicalFake } from "../../types/dataTypes";
 
 import TagsLayout from "../Tag/TagsLayout";
 
-const Card = ({ id, source, theme, subtheme }: medicalFake) => {
+const Card = ({ id, source, theme, subtheme, tags }: medicalFake) => {
   return (
     <div className={styles.card} key={id}>
       <Link href={`/card/${id}`}>
@@ -12,7 +12,7 @@ const Card = ({ id, source, theme, subtheme }: medicalFake) => {
           <h3 className={styles.cardTitle}>{subtheme}</h3>
         </a>
       </Link>
-      <TagsLayout />
+      {tags && <TagsLayout tags={tags}/>}
     </div>
   );
 }; 

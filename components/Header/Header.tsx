@@ -22,6 +22,11 @@ const Header = () => {
             </p>
           </div>
         </Link>
+        <div className={styles.rightWrap}>
+        <div className={styles.linksWrap}>
+        <Link href="/about"><a>Про Проект</a></Link>
+        <Link href="/method"><a>Методологія</a></Link>
+          </div>
         <div className={styles.searchWrap}>
           {router.pathname !== "/search" ? (
             <Link href="/search">
@@ -44,7 +49,7 @@ const Header = () => {
               />
             </Link>
           )}
-        </div>
+        </div></div>
       </header>
     </>
   );

@@ -3,6 +3,7 @@ import styles from "./../../styles/Home.module.scss";
 import TagsLayout from "../../components/Tag/TagsLayout";
 
 import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
+import Statistic from '../../components/Statistic/Statistic'
 import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
 import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
 import { tableData } from "./../../data/tableData";
@@ -23,7 +24,7 @@ function CartPage() {
             </div>
             <h2 className={styles.subtheme}>{item.subtheme}</h2>
             <div style={{ marginLeft: "4rem" }}>
-              <TagsLayout />
+             {item.tags && <TagsLayout tags={item.tags}/>}
             </div>
             <div className={styles.verdictWrap}>
               <FaHandPointUp style={{ color: "#D12020", fontSize: "1.4rem" }} />
@@ -41,7 +42,7 @@ function CartPage() {
               <VoxArticlesLayout />
             </div>
           </div>
-          <div>39</div>
+          <div><Statistic /></div>
         </>
       );
     }
