@@ -8,25 +8,25 @@ import { tableData } from "../../data/tableData";
 const CardsLayout = ({
   suggestions,
   suggestionIndex,
+  tag,
   handleClick,
 }: {
   suggestions?: string[];
   suggestionIndex?: number;
+  tag?: string;
   handleClick?: React.ChangeEventHandler<HTMLInputElement>;
 }) => {
   const renderedData = tableData.map((item, i) => {
     if (item.theme && !suggestions) {
       return (
-       
-            <Card
-              key={i}
-              id={item.id}
-              source={item.source}
-              theme={item.theme}
-              subtheme={item.subtheme}
-              tags={item.tags}
-            />
-        
+        <Card
+          key={i}
+          id={item.id}
+          source={item.source}
+          theme={item.theme}
+          subtheme={item.subtheme}
+          tags={item.tags}
+        />
       );
     }
   });
@@ -38,16 +38,14 @@ const CardsLayout = ({
         suggestions.includes(item.subtheme)
       ) {
         return (
-          
-              <Card key={i}
-                id={item.id}
-                source={item.source}
-                theme={item.theme}
-                subtheme={item.subtheme}
-                tags={item.tags}
-              />
-           
-         
+          <Card
+            key={i}
+            id={item.id}
+            source={item.source}
+            theme={item.theme}
+            subtheme={item.subtheme}
+            tags={item.tags}
+          />
         );
       }
     }
@@ -56,7 +54,8 @@ const CardsLayout = ({
   return (
     <div className={styles.cardWrap}>
       {/* @ts-ignore */}
-      <SectionLabel label="fakes" />
+    
+      {!suggestions && !tag ? <SectionLabel label="fakes" /> : null }
       {suggestions ? renderedSearchData : renderedData}
     </div>
   );

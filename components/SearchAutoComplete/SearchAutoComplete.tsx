@@ -32,16 +32,11 @@ const SearchAutoComplete = () => {
       </button>
       {value && (
         <>
-          <CardsLayout 
-          handleClick={handleClick}
-          suggestionIndex={suggestionIndex}
-          suggestions={suggestions}
-          />
-          {/* <Suggestions
+          <CardsLayout
             handleClick={handleClick}
             suggestionIndex={suggestionIndex}
             suggestions={suggestions}
-          /> */}
+          />
         </>
       )}
     </div>

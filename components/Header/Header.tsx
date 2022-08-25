@@ -13,8 +13,8 @@ const Header = () => {
         <Link href="/">
           <div className={styles.logo}>
             <p className={styles.voxLogo}>
-              Вокс <br />
-              Україна
+            Детокс
+            від  <br />пропаганди
             </p>
             <p className={styles.projectLogo}>
               База даних <br />
