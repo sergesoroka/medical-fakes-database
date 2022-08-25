@@ -12,6 +12,7 @@ const Card = ({ id, source, theme, subtheme, tags }: medicalFake) => {
           <h3 className={styles.cardTitle}>{subtheme}</h3>
         </a>
       </Link>
+      {/* @ts-ignore */}
       {tags && <TagsLayout tags={tags}/>}
     </div>
   );
