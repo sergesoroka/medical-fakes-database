@@ -31,6 +31,12 @@ $primary-color: #3F4871;
   color: #4a4a4a;
   margin-bottom: 4rem;
 }
+.textDiscript > p > a {
+  color: #0050ad !important;
+}
+.textDiscript > p > a:hover {
+  color: #002a5a !important;
+}
 .subtheme {
   font-size: 36px;
   font-weight: 200;

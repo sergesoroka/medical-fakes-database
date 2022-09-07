@@ -4,11 +4,14 @@
 }
 
 .tagHeading {
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 200;
-  line-height: 50px;
+  line-height: 37px;
   color: #3F4871;
-  // border-bottom: 2px solid #3F4871;
-  padding-bottom: 1rem;
   margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #a6e1fa;
+  display: inline-block;
+  padding: 0 .8rem;
 }
