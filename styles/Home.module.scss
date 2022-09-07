@@ -31,7 +31,7 @@ $primary-color: #3F4871;
   color: #4a4a4a;
   margin-bottom: 4rem;
 }
-.textDiscript > p > a {
+.textDiscript > p > a, .textDiscript > div > p > a > em {
   color: #0050ad !important;
 }
 .textDiscript > p > a:hover {
