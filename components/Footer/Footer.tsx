@@ -7,7 +7,7 @@ import instagram from "./../../public/icons/instagram.svg";
 import facebook from "./../../public/icons/facebook.svg";
 import youtube from "./../../public/icons/youtube.svg";
 import logo1 from "./../../public/icons/logo1.png";
-import logo2 from "./../../public/icons/logo2.png";
+import voxCheckLogo from "./../../public/icons/voxchek-logo.svg";
 
 const Footer = () => {
   return (
@@ -24,8 +24,8 @@ const Footer = () => {
           Великої Британії, несе виключно компанія ТОВ «Делойт Консалтинг» в
           рамках контракту №72012118C00001.
         </p>
-        <div style={{ height: "30px", width: '150px', marginTop: "20px" }}>
-          <Image src={logo2} height="30" width="150" alt="Logo VoxCheck" />
+        <div style={{ height: "20px", width: '175px', marginTop: "20px" }}>
+          <Image src={voxCheckLogo} height="20" width="175" alt="Logo VoxCheck" />
         </div>
         <div style={{ height: "87px", width: '151px' }}>
         <Image src={logo1} height="87" width="151" alt="Logo USAID" />

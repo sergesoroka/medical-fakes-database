@@ -9,7 +9,7 @@ const TagPage = () => {
     <div className={styles.tagPageWrap}>
       <h2 className={styles.tagHeading}># {tag}</h2>
       {/* @ts-ignore */}
-      <CardsLayout tag={tag} />
+      <CardsLayout tag={tag} page='tag'/>
     </div>
   )
 }

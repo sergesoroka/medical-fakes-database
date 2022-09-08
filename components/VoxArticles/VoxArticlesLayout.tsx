@@ -2,7 +2,7 @@ import React from "react";
 import Article from "./Article";
 import { dataVox } from "../../data/dataVox";
 import styles from "./VoxArticles.module.css";
-
+import Link from "next/link";
 import SectionLabel from "../SectionLabel/SectionLabel";
 
 const VoxArticlesLayout = () => {
@@ -19,10 +19,17 @@ const VoxArticlesLayout = () => {
       />
     );
   });
-  return (<div className={styles.articlesWrap}>
-    <SectionLabel label="articles" />
-    {DataVoxRendered}
-    </div>);
+  return (
+    <div className={styles.articlesWrap}>
+      <Link href="/articles">
+        <a>
+          <SectionLabel label="articles" />
+        </a>
+      </Link>
+
+      {DataVoxRendered}
+    </div>
+  );
 };
 
 export default VoxArticlesLayout;

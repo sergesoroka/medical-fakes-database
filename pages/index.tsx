@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.mainContent}>
       <div className={styles.fakes}>
-        <CardsLayout />
+        <CardsLayout page='home'/>
         <Infografica />
       </div>
       <div className={styles.media}>

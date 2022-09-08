@@ -4,34 +4,49 @@ import styles from "./Card.module.css";
 import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
 import { tableData } from "../../data/tableData";
-import { useGetFakesByNameQuery } from "../../store/api";
+import Link from "next/link";
 
 const CardsLayout = ({
   suggestions,
   suggestionIndex,
   tag,
+  page,
   handleClick,
 }: {
   suggestions?: string[];
   suggestionIndex?: number;
   tag?: string;
+  page?: string;
   handleClick?: React.ChangeEventHandler<HTMLInputElement>;
 }) => {
   const router = useRouter();
+  console.log(page);
 
-  const renderedData = tableData.map((item, i) => {
-    if (item.theme && !suggestions) {
-      return (
-        <Card
-          key={i}
-          id={item.id}
-          source={item.source}
-          theme={item.theme}
-          subtheme={item.subtheme}
-          tags={item.tags}
-        />
-      );
-    }
+  // .slice(0, 5)
+  const homePageRenderedData = tableData.slice(0, 5).map((item, i) => {
+    return (
+      <Card
+        key={i}
+        id={item.id}
+        source={item.source}
+        theme={item.theme}
+        subtheme={item.subtheme}
+        tags={item.tags}
+      />
+    );
+  });
+
+  const allFakesPageRenderedData = tableData.map((item, i) => {
+    return (
+      <Card
+        key={i}
+        id={item.id}
+        source={item.source}
+        theme={item.theme}
+        subtheme={item.subtheme}
+        tags={item.tags}
+      />
+    );
   });
 
   const renderedSearchData = tableData.map((item, i) => {
@@ -55,7 +70,10 @@ const CardsLayout = ({
   });
 
   const renderedDataByTag = tableData.map((item, i) => {
-    if (item.tags === tag) {
+    {
+      /* @ts-ignore */
+    }
+    if (item.tags.split(", ").includes(tag)) {
       return (
         <Card
           key={i}
@@ -73,9 +91,18 @@ const CardsLayout = ({
     <div className={styles.cardWrap}>
       {/* @ts-ignore */}
 
-      {!suggestions && !tag ? <SectionLabel label="fakes" /> : null}
-      {suggestions ? renderedSearchData : renderedData}
-      { router.route == '/tag/[tag]' ? renderedDataByTag : null }
+      {!suggestions && !tag ? (
+        <Link href="/fakes">
+          <a>
+            <SectionLabel label="fakes" />
+          </a>
+        </Link>
+      ) : null}
+
+      {page === "tag" ? renderedDataByTag : null}
+      {router.asPath === "/fakes" ? allFakesPageRenderedData : null}
+      {suggestions ? renderedSearchData : null}
+      {page === "home" ? homePageRenderedData : null}
     </div>
   );
 };
