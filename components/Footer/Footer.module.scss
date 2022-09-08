@@ -1,14 +1,18 @@
 $primary-color: #3F4871;
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 64px;
+  
+  height: 236px;
   border-bottom: 2px solid $primary-color;
   border-left: 2px solid $primary-color;
   padding: 1rem;
-  margin-top: 6rem;
+  margin-top: 1rem;
+}
+.copyrightIconsWrap {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .copyright {
   font-size: 1.2rem;
@@ -17,7 +21,38 @@ $primary-color: #3F4871;
 
 .icons {
   display: flex;
-  width: 200px;
+  width: 180px;
   justify-content: space-between;
 }
 
+.disclaimWrap{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.disclaim {
+  width: 70%;
+  font-size: 14px;
+  color: #3F4871;
+  line-height: 1.4rem;
+}
+.disclaimWord {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    height: 640px;
+  }
+  .icons {
+    display: block;
+  }
+  .disclaimWrap {
+    display: block;
+  }
+
+  .disclaim {
+    width: 100%;
+  }
+}
