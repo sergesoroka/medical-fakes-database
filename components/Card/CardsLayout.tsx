@@ -70,9 +70,9 @@ const CardsLayout = ({
   });
 
   const renderedDataByTag = tableData.map((item, i) => {
-    {
+    
       /* @ts-ignore */
-    }
+   
     if (item.tags.split(", ").includes(tag)) {
       return (
         <Card
