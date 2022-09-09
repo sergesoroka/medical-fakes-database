@@ -1,18 +1,19 @@
 import { useRouter } from "next/router";
 import styles from "./../../styles/Home.module.scss";
 import TagsLayout from "../../components/Tag/TagsLayout";
-
+import Infografica from "../../components/Infografica/Infografica";
 import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
 import Statistic from '../../components/Statistic/Statistic'
 import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
 import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
 import { sample } from "./../../data/sample";
+import { fakesData } from "./../../data/fakes/fakesData"
 
 function CartPage() {
   const router = useRouter();
   const { id } = router.query;
 
-  const renderedPage = sample.map((item, i) => {
+  const renderedPage = fakesData.map((item, i) => {
     if (item.id === id) {
       return (
         <>
@@ -41,11 +42,12 @@ function CartPage() {
             
 
             <div className={styles.articlesWrap}>
-              {/* <YouTubeVideo /> */}
-              <VoxArticlesLayout />
+              <YouTubeVideo video_id={item.video_id}/>
+              <VoxArticlesLayout vox_article_id={item.vox_article_id}/>
             </div>
+              <Infografica infographic_id={item.infographic_id}/>
           </div>
-          <div><Statistic /></div>
+          <div><Statistic subtheme={item.subtheme}/></div>
         </>
       );
     }

@@ -21,6 +21,17 @@ $primary-color: #3F4871;
   padding: 1.2rem;
   margin-top: 3rem;
 }
+
+.infoPage {
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+
+.videoPage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
 .articlesWrap {
   display: flex;
   gap: 4rem;

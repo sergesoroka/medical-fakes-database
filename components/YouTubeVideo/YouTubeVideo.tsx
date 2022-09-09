@@ -1,8 +1,26 @@
+/* eslint-disable react/no-unknown-property */
 import styles from "./YouTubeVideo.module.scss";
 import SectionLabel from "../SectionLabel/SectionLabel";
 import Link from "next/link";
 
-const YouTubeVideo = () => {
+import { videoData } from "./../../data/fakes/videoData";
+
+const YouTubeVideo = ({ video_id }: { video_id: string }) => {
+  const video = videoData.map((item, i) => {
+    if (video_id == item.video_id) {
+      return (
+        <iframe
+          width="560"
+          height="315"
+          src={item.video_link}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      );
+    }
+  });
   return (
     <div className={styles.videoWrap}>
       <Link href="/video">
@@ -11,17 +29,7 @@ const YouTubeVideo = () => {
         </a>
       </Link>
 
-      <div className={styles.video}>
-        <iframe
-          width="100%"
-          height="400px"
-          src="https://www.youtube.com/embed/jDCp6s0Md3c"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <div className={styles.video}>{video}</div>
     </div>
   );
 };

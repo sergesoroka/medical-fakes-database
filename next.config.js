@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['voxukraine.org'],
+    domains: ['voxukraine.org', 'scontent.fiev6-1.fna.fbcdn.net'],
   },
 }
 
@@ -20,5 +20,6 @@ module.exports = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  
 }
 module.exports = nextConfig

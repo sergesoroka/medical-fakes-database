@@ -4,6 +4,7 @@ import styles from "./Card.module.css";
 import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
 import { tableData } from "../../data/tableData";
+import { fakesData } from "../../data/fakes/fakesData";
 import Link from "next/link";
 
 const CardsLayout = ({
@@ -23,30 +24,39 @@ const CardsLayout = ({
   console.log(page);
 
   // .slice(0, 5)
-  const homePageRenderedData = tableData.slice(0, 5).map((item, i) => {
-    return (
-      <Card
-        key={i}
-        id={item.id}
-        source={item.source}
-        theme={item.theme}
-        subtheme={item.subtheme}
-        tags={item.tags}
-      />
-    );
+  const uniqueSubthemes: string[] = [];
+  const homePageRenderedData = fakesData.map((item, i) => {
+    if (!uniqueSubthemes.includes(item.subtheme)) {
+      uniqueSubthemes.push(item.subtheme);
+
+      return (
+        <Card
+          key={i}
+          id={item.id}
+          source={item.source}
+          theme={item.theme}
+          subtheme={item.subtheme}
+          tags={item.tags}
+        />
+      );
+    }
   });
 
-  const allFakesPageRenderedData = tableData.map((item, i) => {
-    return (
-      <Card
-        key={i}
-        id={item.id}
-        source={item.source}
-        theme={item.theme}
-        subtheme={item.subtheme}
-        tags={item.tags}
-      />
-    );
+  const uniqueSubthemesAll: string[] = [];
+  const allFakesPageRenderedData = fakesData.map((item, i) => {
+    if (!uniqueSubthemesAll.includes(item.subtheme)) {
+      uniqueSubthemesAll.push(item.subtheme);
+      return (
+        <Card
+          key={i}
+          id={item.id}
+          source={item.source}
+          theme={item.theme}
+          subtheme={item.subtheme}
+          tags={item.tags}
+        />
+      );
+    }
   });
 
   const renderedSearchData = tableData.map((item, i) => {
@@ -68,22 +78,24 @@ const CardsLayout = ({
       }
     }
   });
+  const uniqueSubthemesByTag: string[] = [];
+  const renderedDataByTag = fakesData.map((item, i) => {
+    /* @ts-ignore */
 
-  const renderedDataByTag = tableData.map((item, i) => {
-    
-      /* @ts-ignore */
-   
     if (item.tags.split(", ").includes(tag)) {
-      return (
-        <Card
-          key={i}
-          id={item.id}
-          source={item.source}
-          theme={item.theme}
-          subtheme={item.subtheme}
-          tags={item.tags}
-        />
-      );
+      if (!uniqueSubthemesByTag.includes(item.subtheme)) {
+        uniqueSubthemesByTag.push(item.subtheme);
+        return (
+          <Card
+            key={i}
+            id={item.id}
+            source={item.source}
+            theme={item.theme}
+            subtheme={item.subtheme}
+            tags={item.tags}
+          />
+        );
+      }
     }
   });
 

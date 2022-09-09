@@ -11,8 +11,8 @@ export interface VoxDataType {
   link: string;
   imagelink: string;
   title: string;
-  tags: string[];
-  authors: string[]
+  tags?: string[];
+  authors?: string[]
 }
 
 
