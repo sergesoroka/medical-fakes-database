@@ -5,6 +5,11 @@ const nextConfig = {
   images: {
     domains: ['voxukraine.org', 'scontent.fiev6-1.fna.fbcdn.net'],
   },
+  i18n: {
+    locales: ["en", "it", "de", 'ua', 'ru'],
+    defaultLocale: "ua",
+    localeDetection: false,
+  },
 }
 
 module.exports = {

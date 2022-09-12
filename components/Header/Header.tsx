@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import LangSwitcher  from "./LangSwitcher";
 import styles from "./Header.module.scss";
 import search from "./../../public/icons/search.svg";
 import close from "./../../public/icons/close.svg";
@@ -9,6 +10,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
+    <LangSwitcher />
       <header className={styles.header}>
         <Link href="/">
           <div className={styles.logo}>

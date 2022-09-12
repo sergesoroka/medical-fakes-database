@@ -53,6 +53,27 @@ $primary-color: #3F4871;
   
 }
 
+.langMenu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.langMenuItem {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #787878;
+  cursor: pointer;
+}
+.langMenuActiveItem {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3F4871;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .voxLogo,
   .projectLogo {
