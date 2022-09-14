@@ -37,7 +37,9 @@ $primary-color: #3F4871;
   gap: 2rem;
   margin-top: 2rem;
 }
-
+.singlePageArticlesWrap {
+ margin: 0 2rem;
+}
 .articlesWrap {
   display: grid;
   grid-template-columns: auto auto;
