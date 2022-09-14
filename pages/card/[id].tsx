@@ -6,14 +6,15 @@ import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
 import Statistic from '../../components/Statistic/Statistic'
 import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
 import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
-import { sample } from "./../../data/sample";
+// @ts-ignore
 import { fakesData } from "./../../data/fakes/fakesData"
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
 
 function CartPage() {
   const router = useRouter();
   const { id } = router.query;
 
-  const renderedPage = fakesData.map((item, i) => {
+  const renderedPage = fakesData.map((item: { id: string | string[] | undefined; theme: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; subtheme: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | null | undefined; tags: any; verdict: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; discription: any; disproof: any; video_id: string; vox_article_id: string; infographic_id: string; }, i: any) => {
     if (item.id === id) {
       return (
         <>
@@ -47,6 +48,7 @@ function CartPage() {
             </div>
               <Infografica infographic_id={item.infographic_id}/>
           </div>
+          {/* @ts-ignore */}
           <div><Statistic subtheme={item.subtheme}/></div>
         </>
       );

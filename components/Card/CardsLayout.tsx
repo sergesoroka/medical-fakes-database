@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "./Card.module.css";
 import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
-import { tableData } from "../../data/tableData";
+// @ts-ignore
 import { fakesData } from "../../data/fakes/fakesData";
 import Link from "next/link";
 
@@ -21,11 +21,10 @@ const CardsLayout = ({
   handleClick?: React.ChangeEventHandler<HTMLInputElement>;
 }) => {
   const router = useRouter();
-  console.log(page);
 
-  // .slice(0, 5)
   const uniqueSubthemes: string[] = [];
-  const homePageRenderedData = fakesData.map((item, i) => {
+
+  const homePageRenderedData = fakesData.slice(0, 80).map((item, i) => {
     if (!uniqueSubthemes.includes(item.subtheme)) {
       uniqueSubthemes.push(item.subtheme);
 
@@ -59,7 +58,7 @@ const CardsLayout = ({
     }
   });
 
-  const renderedSearchData = tableData.map((item, i) => {
+  const renderedSearchData = fakesData.map((item, i) => {
     if (item.theme && suggestions) {
       if (
         suggestions.includes(item.theme) ||

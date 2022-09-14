@@ -19,11 +19,9 @@ const Video = () => {
     );
   });
   return (
-    <div className={styles.infoPage}>
+    <div className={styles.videoPageWrap}>
       <SectionLabel label="video" />
-      <div className={styles.videoPage}>
-      {video}
-      </div>
+      <div className={styles.videoPage}>{video}</div>
     </div>
   );
 };

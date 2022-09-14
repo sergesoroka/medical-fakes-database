@@ -3,7 +3,8 @@ import styles from "./SearchAutoComplete.module.scss";
 
 import CardsLayout from "../Card/CardsLayout";
 import { FiX, FiSearch } from "react-icons/fi";
-import { tableData } from "../../data/tableData";
+// @ts-ignore
+import { fakesData } from "../../data/fakes/fakesData"
 
 const SearchAutoComplete = () => {
   const {
@@ -14,7 +15,7 @@ const SearchAutoComplete = () => {
     suggestionsActive,
     suggestionIndex,
     suggestions,
-  } = useSearchAutoComplete({ data: tableData });
+  } = useSearchAutoComplete({ data: fakesData });
 
   return (
     <div className={styles.searchWrap}>

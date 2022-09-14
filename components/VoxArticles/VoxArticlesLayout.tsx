@@ -23,11 +23,11 @@ const VoxArticlesLayout = ({ vox_article_id }: { vox_article_id: string }) => {
   });
   return (
     <div className={styles.articlesWrap}>
-      <Link href="/articles">
+      {/* <Link href="/articles">
         <a>
           <SectionLabel label="articles" />
         </a>
-      </Link>
+      </Link> */}
 
       {DataVoxRendered}
     </div>

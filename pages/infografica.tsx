@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Infografica from "../components/Infografica/Infografica";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 import styles from "./../styles/Home.module.scss";
 
@@ -10,8 +11,9 @@ const InfograficaPage = () => {
     return (
       <div className={styles.infoWrap} key={item.infographic_id}>
         
-        <Image src={item.infographic_link} height="373" width="660" alt="Section icon" />
-        {/* <Infografica infographic_id={item.infographic_id} /> */}
+        {/* <Image src={item.infographic_link} height="373" width="660" alt="Section icon" /> */}
+        {/* @ts-ignore */}
+        <Infografica infographic_id={item.infographic_id} />
       </div>
     );
   });

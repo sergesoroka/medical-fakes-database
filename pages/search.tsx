@@ -9,7 +9,7 @@ const search = () => {
     <div className={styles.searchWrap}>
       <SearchAutoComplete />
       {/* @ts-ignore */}
-      <TagsLayout tags={tags} />
+      {/* <TagsLayout tags={tags} /> */}
     </div>
   );
 };

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['voxukraine.org', 'scontent.fiev6-1.fna.fbcdn.net'],
+    domains: ['voxukraine.org', 'drive.google.com', 'scontent.flwo6-1.fna.fbcdn.net'],
   },
   i18n: {
     locales: ["en", "it", "de", 'ua', 'ru'],
