@@ -6,7 +6,7 @@ import telegram from "./../../public/icons/telegram.svg";
 import instagram from "./../../public/icons/instagram.svg";
 import facebook from "./../../public/icons/facebook.svg";
 import youtube from "./../../public/icons/youtube.svg";
-import logo1 from "./../../public/icons/logo1.png";
+import usaid_logo from "./../../public/icons/usaid_logo.svg";
 import voxCheckLogo from "./../../public/icons/voxchek-logo.svg";
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
           <Image src={voxCheckLogo} height="20" width="175" alt="Logo VoxCheck" />
         </div>
         <div style={{ height: "87px", width: '151px' }}>
-        <Image src={logo1} height="87" width="151" alt="Logo USAID" />
+        <Image src={usaid_logo} height="87" width="151" alt="Logo USAID" />
         </div>
         
       </div>

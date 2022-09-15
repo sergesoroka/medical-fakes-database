@@ -13,6 +13,7 @@ const InfograficaPage = () => {
         
         {/* <Image src={item.infographic_link} height="373" width="660" alt="Section icon" /> */}
         {/* @ts-ignore */}
+        <h2 className={styles.infoTitle}>{item.infographic_title}</h2>
         <Infografica infographic_id={item.infographic_id} />
       </div>
     );

@@ -15,6 +15,7 @@ import {
   ReactPortal,
 } from "react";
 import SectionLabel from "../../components/SectionLabel/SectionLabel";
+import Link from "next/link";
 
 function CartPage() {
   const router = useRouter();
@@ -66,7 +67,11 @@ function CartPage() {
               <div className={styles.themeSection}>
                 <div className={styles.wordTheme}>ТЕМА</div>
                 <div className={styles.arrowTheme}></div>
-                <h3 className={styles.theme}>{item.theme}</h3>
+                <Link href={`/theme/${id}`}>
+                  <a>
+                    <h3 className={styles.theme}>{item.theme}</h3>
+                  </a>
+                </Link>
               </div>
               <h2 className={styles.subtheme}>{item.subtheme}</h2>
               <div style={{ marginLeft: "4rem" }}>
@@ -102,7 +107,7 @@ function CartPage() {
               <Infografica infographic_id={item.infographic_id} />
             </div>
             <div>
-            {/* @ts-ignore */}
+              {/* @ts-ignore */}
               <Statistic subtheme={item.subtheme} />
             </div>
           </>

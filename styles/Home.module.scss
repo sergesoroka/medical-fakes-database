@@ -21,7 +21,12 @@ $primary-color: #3F4871;
   padding: 1.2rem;
   margin-top: 3rem;
 }
-
+.infoTitle {
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #3F4871;
+}
 .infoPage {
   display: grid;
   grid-template-columns: auto auto;
