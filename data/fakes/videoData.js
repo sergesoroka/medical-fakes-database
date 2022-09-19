@@ -1,4 +1,4 @@
-export const videoData = [
+export const videoData =  [
   {
     "video_id": "1",
     "video_title": "Фейки вбивають. Випуск №1",
