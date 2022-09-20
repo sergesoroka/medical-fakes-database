@@ -25,7 +25,7 @@ const CardsLayout = ({
   const router = useRouter();
 
   const uniqueSubthemes: string[] = [];
-
+/* @ts-ignore */
   const homePageRenderedData = fakesData.slice(0, 80).map((item, i) => {
     if (!uniqueSubthemes.includes(item.subtheme)) {
       uniqueSubthemes.push(item.subtheme);
@@ -42,9 +42,11 @@ const CardsLayout = ({
       );
     }
   });
-
-  const uniqueSubthemesAll: string[] = [];
+/* @ts-ignore */
+  const uniqueSubthemesAll = [];
+  /* @ts-ignore */
   const allFakesPageRenderedData = fakesData.map((item, i) => {
+    /* @ts-ignore */
     if (!uniqueSubthemesAll.includes(item.subtheme)) {
       uniqueSubthemesAll.push(item.subtheme);
       return (
@@ -59,7 +61,7 @@ const CardsLayout = ({
       );
     }
   });
-
+/* @ts-ignore */
   const renderedSearchData = fakesData.map((item, i) => {
     if (item.theme && suggestions) {
       if (
@@ -79,11 +81,14 @@ const CardsLayout = ({
       }
     }
   });
-  const uniqueSubthemesByTag: string[] = [];
+  /* @ts-ignore */
+  const uniqueSubthemesByTag= [];
+  /* @ts-ignore */
   const renderedDataByTag = fakesData.map((item, i) => {
     /* @ts-ignore */
 
     if (item.tags.split(", ").includes(tag)) {
+      /* @ts-ignore */
       if (!uniqueSubthemesByTag.includes(item.subtheme)) {
         uniqueSubthemesByTag.push(item.subtheme);
         return (
