@@ -99,9 +99,11 @@ const CardsLayout = ({
       }
     }
   });
-  const uniqueThemes: string[] = [];
-     /* @ts-ignore */
+  /* @ts-ignore */
+  const uniqueThemes = [];
+  /* @ts-ignore */
   const renderedForThemePage = fakesData.map((item, i) => {
+    /* @ts-ignore */
     if (!uniqueThemes.includes(item.subtheme)) {
       uniqueThemes.push(item.subtheme);
       if (theme === item.theme) {
