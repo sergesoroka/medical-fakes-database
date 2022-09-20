@@ -154,5 +154,11 @@ export const articlesData =  [
     "vox_article_title": "ФЕЙК: У Чилі схвалено закон про права «мутантів» і генномодифікованих людей — Остап Стахів",
     "vox_article_link": "https://voxukraine.org/fejk-u-chyli-shvaleno-zakon-pro-prava-mutantiv-i-gennomodyfikovanyh-lyudej-ostap-stahiv/",
     "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+  },
+  {
+    "vox_article_id": "27",
+    "vox_article_title": "ФЕЙК: Дослідження США в Україні призвели до зростання захворюваності на кліщовий бореліоз в Україні та збільшення кількості кліщів в Росії",
+    "vox_article_link": "https://voxukraine.org/fejk-doslidzhennya-ssha-v-ukrayini-pryzvely-do-zrostannya-zahvoryuvanosti-na-klishhovyj-borelioz-v-ukrayini-ta-zbilshennya-kilkosti-klishhiv-v-rosiyi/",
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
   }
 ]

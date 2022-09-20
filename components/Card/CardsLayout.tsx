@@ -10,12 +10,14 @@ import Link from "next/link";
 const CardsLayout = ({
   suggestions,
   suggestionIndex,
+  theme,
   tag,
   page,
   handleClick,
 }: {
   suggestions?: string[];
   suggestionIndex?: number;
+  theme?: string;
   tag?: string;
   page?: string;
   handleClick?: React.ChangeEventHandler<HTMLInputElement>;
@@ -97,12 +99,29 @@ const CardsLayout = ({
       }
     }
   });
-
+  const uniqueThemes: string[] = [];
+  const renderedForThemePage = fakesData.map((item, i) => {
+    if (!uniqueThemes.includes(item.subtheme)) {
+      uniqueThemes.push(item.subtheme);
+      if (theme === item.theme) {
+        return (
+          <Card
+            key={i}
+            id={item.id}
+            source={item.source}
+            theme={item.theme}
+            subtheme={item.subtheme}
+            tags={item.tags}
+          />
+        );
+      }
+    }
+  });
   return (
     <div className={styles.cardWrap}>
       {/* @ts-ignore */}
 
-      {!suggestions && !tag ? (
+      {page !== "themePage" && !suggestions && !tag ? (
         <Link href="/fakes">
           <a>
             <SectionLabel label="fakes" />
@@ -114,6 +133,7 @@ const CardsLayout = ({
       {router.asPath === "/fakes" ? allFakesPageRenderedData : null}
       {suggestions ? renderedSearchData : null}
       {page === "home" ? homePageRenderedData : null}
+      {page === "themePage" ? renderedForThemePage : null}
     </div>
   );
 };

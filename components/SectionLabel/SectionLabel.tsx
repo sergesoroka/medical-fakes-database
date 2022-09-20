@@ -16,7 +16,7 @@ const SectionLabel: React.FC<labelType> = ({ label }: labelType) => {
         <div className={styles.iconVideo}>
           <BsFillCaretRightFill style={{ fontSize: "1.2rem" }} />
         </div>
-        <div className={styles.labelVideo}>Видео</div>
+        <div className={styles.labelVideo}>Відео</div>
         <div className={styles.arrowVideo}></div>
       </div>
     );

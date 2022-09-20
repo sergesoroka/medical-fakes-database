@@ -48,5 +48,35 @@ export const infograficsData =  [
     "infographic_id": "10",
     "infographic_title": "Фейки про ЗАЕС",
     "infographic_link": "https://scontent.flwo6-1.fna.fbcdn.net/v/t39.30808-6/305164098_1841098859554944_9101629576480079359_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=aiCx3W2611YAX-Lfa2m&_nc_ht=scontent.flwo6-1.fna&oh=00_AT_aiZaENnlEXVEL-_Fhb8FaPBnVB0jvhbsAS0PESVxalA&oe=6324FA41"
+  },
+  {
+    "infographic_id": "11",
+    "infographic_title": "російські окупанти вбивають медицину в Україні",
+    "infographic_link": "https://scontent.flwo4-1.fna.fbcdn.net/v/t39.30808-6/305996463_1850467648618065_2236166846893115211_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=3DlAtcuKfpUAX9iGxB9&_nc_ht=scontent.flwo4-1.fna&oh=00_AT85seigPF4_xWPwzUK1SUjwughh6OSVHOTzkUhyQS-Faw&oe=632D933D"
+  },
+  {
+    "infographic_id": "12",
+    "infographic_title": "Чому чорна трансплантологія — це міф?",
+    "infographic_link": "https://scontent.flwo6-1.fna.fbcdn.net/v/t39.30808-6/306969705_1850831185248378_520970562586876083_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=7wa7eIK5MJAAX86FQ9P&tn=BPJOsWd14t3wPbBf&_nc_ht=scontent.flwo6-1.fna&oh=00_AT9evaWEPt4zPmwkVRgduwWt-qt3pyXXA56mXz3Rv0jT2w&oe=632D15E2"
+  },
+  {
+    "infographic_id": "13",
+    "infographic_title": "Міфи про мавпячу віспу",
+    "infographic_link": "https://scontent.flwo4-2.fna.fbcdn.net/v/t39.30808-6/307509052_1852171695114327_4524052182169434793_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C4cQWQ-xEp8AX-mSEGP&tn=BPJOsWd14t3wPbBf&_nc_ht=scontent.flwo4-2.fna&oh=00_AT-Dyg9c-fD3Wf9Au4_SzREixbUbiq7-P8jMB_tYJrJJrA&oe=632D139E"
+  },
+  {
+    "infographic_id": "14",
+    "infographic_title": "Профілактика мавпячої віспи",
+    "infographic_link": "https://scontent.flwo4-1.fna.fbcdn.net/v/t39.30808-6/306982437_1852171691780994_4064523766781649005_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ddgj0zTlsI8AX94j4sr&_nc_ht=scontent.flwo4-1.fna&oh=00_AT_b_NV9zXU8upoXWVLyaqwWladdTvylpOfa7ANK1c3D5A&oe=632E2E83"
+  },
+  {
+    "infographic_id": "15",
+    "infographic_title": "Україні не загрожує голод!",
+    "infographic_link": "https://scontent.flwo4-2.fna.fbcdn.net/v/t39.30808-6/307140380_1852223028442527_1699669618433493449_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=nVtDXPqQxHYAX_wjZgm&_nc_ht=scontent.flwo4-2.fna&oh=00_AT91F56OP1G4MxWsITdUPpFi8f940RPtIvrDDUX7iBNk0A&oe=632E05FF"
+  },
+  {
+    "infographic_id": "16",
+    "infographic_title": "В Україні немає дефіциту олії!",
+    "infographic_link": "https://scontent.flwo6-1.fna.fbcdn.net/v/t39.30808-6/307987804_1854449304886566_8009026122875052747_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=tp9d0ebxoHoAX_IqDBO&_nc_ht=scontent.flwo6-1.fna&oh=00_AT_hUmLVwlfQxrq2H67G-MNefQq0exDvF5_97fccMxjuhQ&oe=632E5E8B"
   }
 ]
