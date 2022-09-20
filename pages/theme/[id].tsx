@@ -7,14 +7,15 @@ import { medicalFake } from "./../../types/dataTypes";
 import ThemeItem from "../../components/theme/ThemeItem";
 
 const Theme = () => {
-
-  const themesUnique: string[] = [];
+/* @ts-ignore */
+  const themesUnique = [];
   fakesData.map((item: medicalFake) => {
+    /* @ts-ignore */
     if (!themesUnique.includes(item.theme)) {
       themesUnique.push(item.theme);
     }
   });
-
+/* @ts-ignore */
   const theme = themesUnique.map((theme) => <ThemeItem key={theme} theme={theme} />);
   return (
     <div className={styles.themePage}>
