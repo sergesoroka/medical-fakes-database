@@ -10,6 +10,7 @@ const YouTubeVideo = ({ video_id }: { video_id: string }) => {
     if (video_id == item.video_id) {
       return (
         <iframe
+          key={item.video_id}
           width="560"
           height="315"
           src={item.video_link}

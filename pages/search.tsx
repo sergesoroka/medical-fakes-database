@@ -2,14 +2,19 @@ import SearchAutoComplete from "../components/SearchAutoComplete/SearchAutoCompl
 import TagsLayout from "../components/Tag/TagsLayout";
 import styles from "./../styles/Search.module.scss";
 
-const tags = 'Гуманітарна катастрофа, Covid-19, Медиціна'
+import { uniqueTags } from '../utils/uniqueTags'
+import Tag from './../components/Tag/Tag'
 
 const search = () => {
+  const tagsList = uniqueTags.map((tag, i) => {
+    //@ts-ignore
+    return <Tag key={i} tag={tag} />;
+  });
   return (
     <div className={styles.searchWrap}>
       <SearchAutoComplete />
-      {/* @ts-ignore */}
-      {/* <TagsLayout tags={tags} /> */}
+      <div className={styles.tagsWrap}>{tagsList}</div>
+     
     </div>
   );
 };
