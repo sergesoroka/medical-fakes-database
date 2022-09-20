@@ -25,7 +25,7 @@ const CardsLayout = ({
   const router = useRouter();
 
   const uniqueSubthemes: string[] = [];
-/* @ts-ignore */
+  /* @ts-ignore */
   const homePageRenderedData = fakesData.slice(0, 80).map((item, i) => {
     if (!uniqueSubthemes.includes(item.subtheme)) {
       uniqueSubthemes.push(item.subtheme);
@@ -42,7 +42,7 @@ const CardsLayout = ({
       );
     }
   });
-/* @ts-ignore */
+  /* @ts-ignore */
   const uniqueSubthemesAll = [];
   /* @ts-ignore */
   const allFakesPageRenderedData = fakesData.map((item, i) => {
@@ -61,28 +61,34 @@ const CardsLayout = ({
       );
     }
   });
-/* @ts-ignore */
+  /* @ts-ignore */
+  const uniqueSearch = [];
+  /* @ts-ignore */
   const renderedSearchData = fakesData.map((item, i) => {
-    if (item.theme && suggestions) {
-      if (
-        suggestions.includes(item.theme) ||
-        suggestions.includes(item.subtheme)
-      ) {
-        return (
-          <Card
-            key={i}
-            id={item.id}
-            source={item.source}
-            theme={item.theme}
-            subtheme={item.subtheme}
-            tags={item.tags}
-          />
-        );
+    /* @ts-ignore */
+    if (!uniqueSearch.includes(item.subtheme)) {
+      uniqueSearch.push(item.subtheme);
+      if (item.theme && suggestions) {
+        if (
+          suggestions.includes(item.theme) ||
+          suggestions.includes(item.subtheme)
+        ) {
+          return (
+            <Card
+              key={i}
+              id={item.id}
+              source={item.source}
+              theme={item.theme}
+              subtheme={item.subtheme}
+              tags={item.tags}
+            />
+          );
+        }
       }
     }
   });
   /* @ts-ignore */
-  const uniqueSubthemesByTag= [];
+  const uniqueSubthemesByTag = [];
   /* @ts-ignore */
   const renderedDataByTag = fakesData.map((item, i) => {
     /* @ts-ignore */
