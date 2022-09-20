@@ -100,6 +100,7 @@ const CardsLayout = ({
     }
   });
   const uniqueThemes: string[] = [];
+     /* @ts-ignore */
   const renderedForThemePage = fakesData.map((item, i) => {
     if (!uniqueThemes.includes(item.subtheme)) {
       uniqueThemes.push(item.subtheme);
