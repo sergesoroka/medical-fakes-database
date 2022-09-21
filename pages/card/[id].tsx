@@ -66,11 +66,10 @@ function CartPage() {
             <div>
               <div className={styles.themeSection}>
                 <div className={styles.wordTheme}>
-                <Link href='/themes'>
-                  <a>
-                  ТЕМА
-                  </a></Link>
-                  </div>
+                  <Link href="/themes">
+                    <a>ТЕМА</a>
+                  </Link>
+                </div>
                 <div className={styles.arrowTheme}></div>
                 <Link href={`/theme/${id}`}>
                   <a>
@@ -103,13 +102,15 @@ function CartPage() {
               />
 
               <div className={styles.singlePageArticlesWrap}>
-                <YouTubeVideo video_id={item.video_id} />
+                {item.video_id && <YouTubeVideo video_id={item.video_id} />}
                 <div>
-                  <SectionLabel label="articles" />
+                  {item.vox_article_id && <SectionLabel label="articles" />}
                   <VoxArticlesLayout vox_article_id={item.vox_article_id} />
                 </div>
               </div>
-              <Infografica infographic_id={item.infographic_id} />
+              {item.infographic_id && (
+                <Infografica infographic_id={item.infographic_id} />
+              )}
             </div>
             <div>
               {/* @ts-ignore */}
