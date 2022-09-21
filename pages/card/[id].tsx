@@ -109,7 +109,9 @@ function CartPage() {
                 </div>
               </div>
               {item.infographic_id && (
-                <Infografica infographic_id={item.infographic_id} />
+                <>
+                <SectionLabel label="infograf" />
+                <Infografica infographic_id={item.infographic_id} /></>
               )}
             </div>
             <div>
