@@ -4,7 +4,7 @@ export const uniqueTags = [];
 
 
 fakesData.map((fake) => {
-  const tags = fake.tags.split(", ");
+  const tags = fake.tags.split(", ")
 
   tags.map((tag) => {
     if (!uniqueTags.includes(tag)) {

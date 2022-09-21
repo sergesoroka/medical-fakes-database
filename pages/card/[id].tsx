@@ -65,7 +65,12 @@ function CartPage() {
           <>
             <div>
               <div className={styles.themeSection}>
-                <div className={styles.wordTheme}>ТЕМА</div>
+                <div className={styles.wordTheme}>
+                <Link href='/themes'>
+                  <a>
+                  ТЕМА
+                  </a></Link>
+                  </div>
                 <div className={styles.arrowTheme}></div>
                 <Link href={`/theme/${id}`}>
                   <a>
