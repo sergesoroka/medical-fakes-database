@@ -51,7 +51,7 @@ export const articlesData =  [
     "vox_article_id": "9",
     "vox_article_title": "«Чорні трансплантологи» на Донбасі та мавпяча віспа через гомосексуалів: огляд наративів про охорону здоров’я. Випуск №9",
     "vox_article_link": "https://voxukraine.org/chorni-transplantology-na-donbasi-ta-mavpyacha-vispa-cherez-gomoseksualiv-oglyad-naratyviv-pro-ohoronu-zdorovya-vypusk-9/",
-    "vox_article_image_link": "https://voxukraine.org/chorni-transplantology-na-donbasi-ta-mavpyacha-vispa-cherez-gomoseksualiv-oglyad-naratyviv-pro-ohoronu-zdorovya-vypusk-9/"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/Depositphotos_253688940_L-1.jpg"
   },
   {
     "vox_article_id": "10",
@@ -87,7 +87,7 @@ export const articlesData =  [
     "vox_article_id": "15",
     "vox_article_title": "ФЕЙК: Діяльність біолабораторій призвела до спалаху африканської чуми свиней в Україні",
     "vox_article_link": "https://voxukraine.org/fejk-diyalnist-biolaboratorij-pryzvela-do-spalahu-afrykanskoyi-chumy-svynej-v-ukrayini/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2021/03/fake-907x600-2-6-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "16",
@@ -99,66 +99,66 @@ export const articlesData =  [
     "vox_article_id": "17",
     "vox_article_title": "ФЕЙК: СБУ підірвали цистерну з аміачною селтрою у Харківській області для інсинуації російської хімічної атаки ",
     "vox_article_link": "https://voxukraine.org/fejk-sbu-pidirvaly-tsysternu-z-amiachnoyu-selitroyu-u-harkivskij-oblasti-dlya-insynuatsiyi-rosijskoyi-himichnoyi-ataky/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-3.jpg"
   },
   {
     "vox_article_id": "18",
     "vox_article_title": "НЕПРАВДА: Німеччина розробляла біологічну зброю в Україні",
     "vox_article_link": "https://voxukraine.org/nepravda-nimechchyna-rozroblyala-biologichnu-zbroyu-v-ukrayini/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "19",
     "vox_article_title": "МАНІПУЛЯЦІЯ: ВООЗ заявила, що в Маріуполі немає спалаху холери ",
     "vox_article_link": "https://voxukraine.org/manipulyatsiya-vooz-zayavyla-shho-v-mariupoli-nemaye-spalahu-holery/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "20",
     "vox_article_title": "НЕПРАВДА: Міжнародні організації готують голодомор, хоча українського зерна достатньо — Остап Стахів",
     "vox_article_link": "https://voxukraine.org/nepravda-mizhnarodni-organizatsiyi-gotuyut-golodomor-hocha-ukrayinskogo-zerna-dostatno-ostap-stahiv/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2021/03/fake-907x600-2-6-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-1.jpg"
   },
   {
     "vox_article_id": "21",
     "vox_article_title": "НЕПРАВДА: ЗСУ спалили 50 тисяч тонн зерна у зерносховищі в Маріуполі",
     "vox_article_link": "https://voxukraine.org/nepravda-zsu-spalyly-50-tysyach-tonn-zerna-u-zernoshovyshhi-v-mariupoli/",
-    "vox_article_image_link": "https://voxukraine.org/nepravda-zsu-spalyly-50-tysyach-tonn-zerna-u-zernoshovyshhi-v-mariupoli/"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-1.jpg"
   },
   {
     "vox_article_id": "22",
     "vox_article_title": "КОНСПІРОЛОГІЯ: Україна палить свої та російські поля пшениці",
     "vox_article_link": "https://voxukraine.org/konspirologiya-ukrayina-palyt-svoyi-ta-rosijski-polya-pshenytsi/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-2.jpg"
   },
   {
     "vox_article_id": "23",
     "vox_article_title": "ФЕЙК: Ризик смерті серед вакцинованих від COVID-19 дітей більший в 52 рази — ONS",
     "vox_article_link": "https://voxukraine.org/fejk-ryzyk-smerti-sered-vaktsynovanyh-vid-covid-19-ditej-bilshyj-v-52-razy-ons/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "24",
     "vox_article_title": "НЕПРАВДА: Наприкінці травня 2022 року рівень захворюваності на COVID-19 став нульовим",
     "vox_article_link": "https://voxukraine.org/nepravda-naprykintsi-travnya-2022-roku-riven-zahvoryuvanosti-na-covid-19-stav-nulovym/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "25",
     "vox_article_title": "ФЕЙК: Генеральний директор Pfizer заявив, що одна з цілей компанії — скорочення світового населення на 50%",
     "vox_article_link": "https://voxukraine.org/fejk-generalnyj-dyrektor-pfizer-zayavyv-shho-odna-z-tsilej-kompaniyi-skorochennya-svitovogo-naselennya-na-50/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2021/03/fake-907x600-2-6-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "26",
     "vox_article_title": "ФЕЙК: У Чилі схвалено закон про права «мутантів» і генномодифікованих людей — Остап Стахів",
     "vox_article_link": "https://voxukraine.org/fejk-u-chyli-shvaleno-zakon-pro-prava-mutantiv-i-gennomodyfikovanyh-lyudej-ostap-stahiv/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   },
   {
     "vox_article_id": "27",
     "vox_article_title": "ФЕЙК: Дослідження США в Україні призвели до зростання захворюваності на кліщовий бореліоз в Україні та збільшення кількості кліщів в Росії",
     "vox_article_link": "https://voxukraine.org/fejk-doslidzhennya-ssha-v-ukrayini-pryzvely-do-zrostannya-zahvoryuvanosti-na-klishhovyj-borelioz-v-ukrayini-ta-zbilshennya-kilkosti-klishhiv-v-rosiyi/",
-    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2020/10/fake-907x600-2.jpg"
+    "vox_article_image_link": "https://voxukraine.org/wp-content/uploads/2022/08/fake-site-4.jpg"
   }
 ]
