@@ -11,13 +11,15 @@ const Infografica = ({ infographic_id }: { infographic_id: string }) => {
         // eslint-disable-next-line @next/next/no-img-element
         // <img src={item.infographic_link} height="373" width="660" alt='infigrafica/>
         // @ts-ignore
+        <div className={styles.imageWrap}>
         <Image
           key={infographic_id}
           src={item.infographic_link}
-          height="280"
-          width="500"
+          width="640"
+          height="360"
+          
           alt="Infografic"
-        />
+        /></div>
       );
     }
   });

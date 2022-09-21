@@ -61,10 +61,10 @@ $primary-color: #3F4871;
   color: #4a4a4a;
   margin-bottom: 4rem;
 }
-.textDiscript > p > a, .textDiscript > div > p > a > em {
+.textDiscript > p > a, .textDiscript > div > p > a > em,  .textDiscript > ul > li > a {
   color: #0050ad !important;
 }
-.textDiscript > p > a:hover {
+.textDiscript > p > a:hover, .textDiscript > ul > li > a:hover {
   color: #002a5a !important;
 }
 .subtheme {

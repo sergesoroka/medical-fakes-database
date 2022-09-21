@@ -28,9 +28,9 @@ const SearchAutoComplete = () => {
         onChange={handleChange}
         placeholder="Пошук фейків"
       />
-      <button className={styles.clearBtn} onClick={handleClear}>
+      {/* <button className={styles.clearBtn} onClick={handleClear}>
         <FiX />
-      </button>
+      </button> */}
       {value && (
         <>
           <CardsLayout
