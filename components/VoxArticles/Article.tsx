@@ -19,10 +19,10 @@ const Article = ({
           <Image
             src={imagelink}
             alt={title}
-            width={300}
-            height={300}
-            style={{ width: "200px", height: "auto" }}
-            layout="fixed"
+            width={500}
+            height={500}
+            // style={{ width: "300px", height: "auto" }}
+            layout="intrinsic"
           />
         </div>
         <h2 className={styles.articleTitle}>{title}</h2>
