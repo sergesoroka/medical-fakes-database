@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
      <Head>
-        <title>Детокс від пропаганди | Опис проєкту</title>
+        <title>Опис проєкту | Detox від пропаганди</title>
       </Head>
     <div className={styles.aboutPage}>
       <h1  className={styles.aboutPageTitle}>

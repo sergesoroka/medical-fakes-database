@@ -6,7 +6,7 @@ const Fakes = () => {
   return (
     <>
     <Head>
-        <title>Детокс від пропаганди | Усі фейки</title>
+        <title>Усі фейки | Detox від пропаганди</title>
       </Head>
     <div className={styles.singlePageMainContent}>
       <CardsLayout />

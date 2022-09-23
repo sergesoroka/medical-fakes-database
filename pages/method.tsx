@@ -5,7 +5,7 @@ const Method = () => {
   return (
     <>
       <Head>
-        <title>Детокс від пропаганди | Методологія</title>
+        <title>Методологія | Detox від пропаганди</title>
       </Head>
       <div className={styles.aboutPage}>
         <h1 className={styles.aboutPageTitle}>Методологія</h1>

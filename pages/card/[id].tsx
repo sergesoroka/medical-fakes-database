@@ -74,7 +74,7 @@ function CartPage() {
         return (
           <>
             <Head>
-              <title>Детокс від пропаганди | {item.subtheme}</title>
+              <title>{item.subtheme} | Detox від пропаганди</title>
             </Head>
             <div>
               <div className={styles.themeSection}>

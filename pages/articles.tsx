@@ -19,7 +19,7 @@ const Articles = () => {
   return (
     <>
      <Head>
-        <title>Детокс від пропаганди | Статті</title>
+        <title>Статті | Detox від пропаганди</title>
       </Head>
     <div  className={styles.articlesPage}>
       <SectionLabel label="articles" />

@@ -4,6 +4,7 @@ import { medicalFake } from "./../types/dataTypes";
 
 import ThemeItem from "../components/theme/ThemeItem";
 import useLangSwitcher from "../utils/langSwitcher";
+import Head from "next/head";
 
 const Theme = () => {
   const { fakes } = useLangSwitcher();
@@ -19,7 +20,14 @@ const Theme = () => {
   const theme = themesUnique.map((theme) => (
     <ThemeItem key={theme} theme={theme} />
   ));
-  return <div className={styles.themePage}>{theme}</div>;
+  return (
+    <>
+    <Head>
+        <title>Усі теми | Detox від пропаганди</title>
+      </Head>
+      <div className={styles.themePage}>{theme}</div>
+    </>
+  );
 };
 
 export default Theme;

@@ -25,7 +25,7 @@ const Video = () => {
   return (
     <>
      <Head>
-        <title>Детокс від пропаганди | Відео</title>
+        <title>Відео | Detox від пропаганди</title>
       </Head>
     <div className={styles.videoPageWrap}>
       <SectionLabel label="video" />

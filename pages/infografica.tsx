@@ -34,7 +34,7 @@ const InfograficaPage = () => {
   return (
     <>
      <Head>
-        <title>Детокс від пропаганди | Інфографіка</title>
+        <title>Інфографіка | Detox від пропаганди</title>
       </Head>
     <div className={styles.infoPage}>
       <SectionLabel label="infograf" />
