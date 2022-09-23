@@ -1,10 +1,23 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./Infografica.module.css";
 
 import { infograficsData } from "./../../data/fakes/infograficsData";
+import { infograficsDataRu } from "./../../data/fakes-Ru/infograficsDataRu";
+import { infograficsDataEn } from "./../../data/fakes-En/infograficsDataEn";
 
 const Infografica = ({ infographic_id }: { infographic_id: string }) => {
-  const infoRender = infograficsData.map((item) => {
+  const router = useRouter();
+  const { locale } = router;
+
+  const data =
+  locale == "en"
+    ? infograficsDataEn
+    : locale == "ru"
+    ? infograficsDataRu
+    : infograficsData;
+
+  const infoRender = data.map((item) => {
     // @ts-ignore
     if (infographic_id == item.infographic_id) {
       return (

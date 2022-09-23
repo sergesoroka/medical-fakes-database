@@ -6,8 +6,15 @@ import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
 import Statistic from "../../components/Statistic/Statistic";
 import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
 import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
+
 // @ts-ignore
 import { fakesData } from "./../../data/fakes/fakesData";
+// @ts-ignore
+import { fakesDataEn } from "./../../data/fakes-En/fakesDataEn";
+// @ts-ignore
+import { fakesDataRu } from "./../../data/fakes-Ru/fakesDataRu";
+
+
 import {
   ReactElement,
   JSXElementConstructor,
@@ -19,9 +26,17 @@ import Link from "next/link";
 
 function CartPage() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id, locale} = router.query;
 
-  const renderedPage = fakesData.map(
+  const data =
+  locale == "en"
+    ? fakesDataEn
+    : locale == "ru"
+    ? fakesDataRu
+    : fakesData;
+
+
+  const renderedPage = data.map(
     (
       item: {
         id: string | string[] | undefined;
@@ -73,11 +88,11 @@ function CartPage() {
                 <div className={styles.arrowTheme}></div>
                 <Link href={`/theme/${id}`}>
                   <a>
-                    <h3 className={styles.theme}>{item.theme}</h3>
+                    <h2 className={styles.theme}>{item.theme}</h2>
                   </a>
                 </Link>
               </div>
-              <h2 className={styles.subtheme}>{item.subtheme}</h2>
+              <h1 className={styles.subtheme}>{item.subtheme}</h1>
               <div style={{ marginLeft: "4rem" }}>
                 {/* @ts-ignore */}
                 {item.tags && <TagsLayout tags={item.tags} />}

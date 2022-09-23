@@ -1,11 +1,10 @@
 // @ts-ignore
 import { useRouter } from "next/router";
+import Link from "next/link";
 import styles from "./Card.module.css";
 import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
-// @ts-ignore
-import { fakesData } from "../../data/fakes/fakesData";
-import Link from "next/link";
+import useLangSwitcher from "../../utils/langSwitcher";
 
 const CardsLayout = ({
   suggestions,
@@ -24,9 +23,10 @@ const CardsLayout = ({
 }) => {
   const router = useRouter();
 
+  const { fakes } = useLangSwitcher();
   const uniqueSubthemes: string[] = [];
   /* @ts-ignore */
-  const homePageRenderedData = fakesData.slice(0, 80).map((item, i) => {
+  const homePageRenderedData = fakes.slice(0, 80).map((item, i) => {
     if (!uniqueSubthemes.includes(item.subtheme)) {
       uniqueSubthemes.push(item.subtheme);
 
@@ -45,7 +45,7 @@ const CardsLayout = ({
   /* @ts-ignore */
   const uniqueSubthemesAll = [];
   /* @ts-ignore */
-  const allFakesPageRenderedData = fakesData.map((item, i) => {
+  const allFakesPageRenderedData = fakes.map((item, i) => {
     /* @ts-ignore */
     if (!uniqueSubthemesAll.includes(item.subtheme)) {
       uniqueSubthemesAll.push(item.subtheme);
@@ -64,7 +64,7 @@ const CardsLayout = ({
   /* @ts-ignore */
   const uniqueSearch = [];
   /* @ts-ignore */
-  const renderedSearchData = fakesData.map((item, i) => {
+  const renderedSearchData = fakes.map((item, i) => {
     /* @ts-ignore */
     if (!uniqueSearch.includes(item.subtheme)) {
       uniqueSearch.push(item.subtheme);
@@ -90,7 +90,7 @@ const CardsLayout = ({
   /* @ts-ignore */
   const uniqueSubthemesByTag = [];
   /* @ts-ignore */
-  const renderedDataByTag = fakesData.map((item, i) => {
+  const renderedDataByTag = fakes.map((item, i) => {
     /* @ts-ignore */
 
     if (item.tags.split(", ").includes(tag)) {
@@ -113,7 +113,7 @@ const CardsLayout = ({
   /* @ts-ignore */
   const uniqueThemes = [];
   /* @ts-ignore */
-  const renderedForThemePage = fakesData.map((item, i) => {
+  const renderedForThemePage = fakes.map((item, i) => {
     /* @ts-ignore */
     if (!uniqueThemes.includes(item.subtheme)) {
       uniqueThemes.push(item.subtheme);

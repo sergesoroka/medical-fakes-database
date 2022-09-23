@@ -3,8 +3,11 @@ import styles from "./../styles/Home.module.scss";
 import { videoData } from "../data/fakes/videoData";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 
+import useLangSwitcher from "../utils/langSwitcher";
+
 const Video = () => {
-  const video = videoData.map((item, i) => {
+  const { video } = useLangSwitcher()
+  const videoRendered = video.map((item, i) => {
     return (
       <iframe
         key={item.video_id}
@@ -21,7 +24,7 @@ const Video = () => {
   return (
     <div className={styles.videoPageWrap}>
       <SectionLabel label="video" />
-      <div className={styles.videoPage}>{video}</div>
+      <div className={styles.videoPage}>{videoRendered}</div>
     </div>
   );
 };

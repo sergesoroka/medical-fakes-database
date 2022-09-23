@@ -3,10 +3,11 @@ import styles from "./YouTubeVideo.module.scss";
 import SectionLabel from "../SectionLabel/SectionLabel";
 import Link from "next/link";
 
-import { videoData } from "./../../data/fakes/videoData";
+import useLangSwitcher from "../../utils/langSwitcher";
 
 const YouTubeVideo = ({ video_id }: { video_id: string }) => {
-  const video = videoData.map((item, i) => {
+  const { video } = useLangSwitcher()
+  const videoRendered = video.map((item, i) => {
     if (video_id == item.video_id) {
       return (
         <>
@@ -34,7 +35,7 @@ const YouTubeVideo = ({ video_id }: { video_id: string }) => {
   });
   return (
     <div className={styles.videoWrap}>
-      <div className={styles.video}>{video}</div>
+      <div className={styles.video}>{videoRendered}</div>
     </div>
   );
 };

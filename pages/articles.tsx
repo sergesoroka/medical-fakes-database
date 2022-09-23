@@ -1,10 +1,13 @@
 import VoxArticlesLayout from "../components/VoxArticles/VoxArticlesLayout";
 import styles from "./../styles/Home.module.scss";
 
-import { articlesData } from "../data/fakes/articlesData";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
+
+import useLangSwitcher from "../utils/langSwitcher";
+
 const Articles = () => {
-  const renderedArticles = articlesData.map((item, id) => {
+  const { articles } = useLangSwitcher()
+  const renderedArticles = articles.map((item, id) => {
     return (
       <VoxArticlesLayout
         key={item.vox_article_id}
