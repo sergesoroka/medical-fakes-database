@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
 import styles from "./../../styles/Home.module.scss";
 import TagsLayout from "../../components/Tag/TagsLayout";
 import Infografica from "../../components/Infografica/Infografica";
@@ -14,7 +15,6 @@ import { fakesDataEn } from "./../../data/fakes-En/fakesDataEn";
 // @ts-ignore
 import { fakesDataRu } from "./../../data/fakes-Ru/fakesDataRu";
 
-
 import {
   ReactElement,
   JSXElementConstructor,
@@ -26,15 +26,10 @@ import Link from "next/link";
 
 function CartPage() {
   const router = useRouter();
-  const { id, locale} = router.query;
+  const { id, locale } = router.query;
 
   const data =
-  locale == "en"
-    ? fakesDataEn
-    : locale == "ru"
-    ? fakesDataRu
-    : fakesData;
-
+    locale == "en" ? fakesDataEn : locale == "ru" ? fakesDataRu : fakesData;
 
   const renderedPage = data.map(
     (
@@ -78,6 +73,9 @@ function CartPage() {
       if (item.id === id) {
         return (
           <>
+            <Head>
+              <title>Детокс від пропаганди | {item.subtheme}</title>
+            </Head>
             <div>
               <div className={styles.themeSection}>
                 <div className={styles.wordTheme}>
@@ -125,8 +123,9 @@ function CartPage() {
               </div>
               {item.infographic_id && (
                 <>
-                <SectionLabel label="infograf" />
-                <Infografica infographic_id={item.infographic_id} /></>
+                  <SectionLabel label="infograf" />
+                  <Infografica infographic_id={item.infographic_id} />
+                </>
               )}
             </div>
             <div>

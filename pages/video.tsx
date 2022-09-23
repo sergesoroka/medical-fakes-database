@@ -4,6 +4,7 @@ import { videoData } from "../data/fakes/videoData";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 
 import useLangSwitcher from "../utils/langSwitcher";
+import Head from "next/head";
 
 const Video = () => {
   const { video } = useLangSwitcher()
@@ -22,10 +23,15 @@ const Video = () => {
     );
   });
   return (
+    <>
+     <Head>
+        <title>Детокс від пропаганди | Відео</title>
+      </Head>
     <div className={styles.videoPageWrap}>
       <SectionLabel label="video" />
       <div className={styles.videoPage}>{videoRendered}</div>
     </div>
+    </>
   );
 };
 

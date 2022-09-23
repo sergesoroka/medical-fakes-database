@@ -4,6 +4,7 @@ import styles from "./../styles/Home.module.scss";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 
 import useLangSwitcher from "../utils/langSwitcher";
+import Head from "next/head";
 
 const Articles = () => {
   const { articles } = useLangSwitcher()
@@ -16,10 +17,14 @@ const Articles = () => {
     );
   });
   return (
+    <>
+     <Head>
+        <title>Детокс від пропаганди | Статті</title>
+      </Head>
     <div  className={styles.articlesPage}>
       <SectionLabel label="articles" />
       <div className={styles.articlesWrap}>{renderedArticles}</div>
-    </div>
+    </div></>
   );
 };
 

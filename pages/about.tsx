@@ -1,7 +1,12 @@
+import Head from "next/head";
 import styles from "./../styles/Home.module.scss";
 
 const About = () => {
   return (
+    <>
+     <Head>
+        <title>Детокс від пропаганди | Опис проєкту</title>
+      </Head>
     <div className={styles.aboutPage}>
       <h1  className={styles.aboutPageTitle}>
         Опис проєкту
@@ -37,7 +42,7 @@ const About = () => {
         українці могли зберегти свої життя та здоров&rsquo;я під час війни
         фізичної та інформаційної.&nbsp;
       </p>
-    </div>
+    </div></>
   );
 };
 

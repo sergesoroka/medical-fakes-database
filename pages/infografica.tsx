@@ -8,6 +8,7 @@ import useLangSwitcher from '../utils/langSwitcher'
 import { infograficsData } from "../data/fakes/infograficsData";
 import { infograficsDataRu } from "../data/fakes-Ru/infograficsDataRu";
 import { infograficsDataEn } from "../data/fakes-En/infograficsDataEn";
+import Head from "next/head";
 
 
 const InfograficaPage = () => {
@@ -31,11 +32,15 @@ const InfograficaPage = () => {
     );
   });
   return (
+    <>
+     <Head>
+        <title>Детокс від пропаганди | Інфографіка</title>
+      </Head>
     <div className={styles.infoPage}>
       <SectionLabel label="infograf" />
       <br />
       {renderedInfo}
-    </div>
+    </div></>
   );
 };
 

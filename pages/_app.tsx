@@ -12,7 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
-        <title>Детокс від пропаганди | База медичних фейків</title>
+        <title>Детокс від пропаганди</title>
+        <meta name="next-head-count" content="3" />
         <meta name="description" content="База медичних фейків" />
         <meta
           property="og:image"
