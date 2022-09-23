@@ -1,6 +1,6 @@
 import React from "react";
 
-import { tableData } from "../../data/tableData";
+
 
 const Table = () => {
   const COLUMS = [
