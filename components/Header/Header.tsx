@@ -14,7 +14,7 @@ const Header = () => {
   const methodLabel = locale == 'en' ? 'Metodology' : locale == 'ru' ? 'Методология' : 'Методологія'
   return (
     <>
-    <LangSwitcher />
+    {/* <LangSwitcher /> */}
       <header className={styles.header}>
         <Link href="/">
           <div className={styles.logo}>
