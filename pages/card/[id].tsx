@@ -10,13 +10,6 @@ import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
 
 import useLangSwitcher from "../../utils/langSwitcher";
 
-// @ts-ignore
-import { fakesData } from "./../../data/fakes/fakesData";
-// @ts-ignore
-import { fakesDataEn } from "./../../data/fakes-En/fakesDataEn";
-// @ts-ignore
-import { fakesDataRu } from "./../../data/fakes-Ru/fakesDataRu";
-
 import SectionLabel from "../../components/SectionLabel/SectionLabel";
 import Link from "next/link";
 
@@ -26,8 +19,7 @@ function CartPage() {
   const { id } = router.query;
   const { locale } = router;
 
-  const data =
-    locale == "en" ? fakesDataEn : locale == "ru" ? fakesDataRu : fakesData;
+ 
 
   const pravda =
     locale == "en"
@@ -105,7 +97,7 @@ function CartPage() {
     }
   });
 
-  return <>{renderedPage}</>;
+  return <div>{renderedPage}</div>;
 }
 
 export default CartPage;

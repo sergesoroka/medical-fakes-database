@@ -1,7 +1,5 @@
 import SearchAutoComplete from "../components/SearchAutoComplete/SearchAutoComplete";
-import TagsLayout from "../components/Tag/TagsLayout";
 import styles from "./../styles/Search.module.scss";
-
 import useUniqueTags from './../utils/uniqueTags'
 import Tag from './../components/Tag/Tag'
 

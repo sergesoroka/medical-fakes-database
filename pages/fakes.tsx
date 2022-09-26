@@ -4,13 +4,14 @@ import Head from "next/head";
 
 const Fakes = () => {
   return (
-    <>
-    <Head>
+    <div>
+      <Head>
         <title>Усі фейки | Detox від пропаганди</title>
       </Head>
-    <div className={styles.singlePageMainContent}>
-      <CardsLayout />
-    </div></>
+      <div className={styles.singlePageMainContent}>
+        <CardsLayout />
+      </div>
+    </div>
   );
 };
 

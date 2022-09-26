@@ -10,6 +10,7 @@ import styles from "../styles/Home.module.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    
     <Provider store={store}>
       <Head>
         <title>Detox від пропаганди</title>

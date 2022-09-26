@@ -21,12 +21,12 @@ const Theme = () => {
     <ThemeItem key={theme} theme={theme} />
   ));
   return (
-    <>
+    <div>
     <Head>
         <title>Усі теми | Detox від пропаганди</title>
       </Head>
       <div className={styles.themePage}>{theme}</div>
-    </>
+    </div>
   );
 };
 

@@ -4,7 +4,6 @@ import styles from "../styles/Home.module.scss";
 import CardsLayout from "../components/Card/CardsLayout";
 import YouTubeVideo from "../components/YouTubeVideo/YouTubeVideo";
 import Infografica from "../components/Infografica/Infografica";
-import { articlesData } from "../data/fakes/articlesData";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 import Link from "next/link";
 
@@ -14,14 +13,14 @@ const Home: NextPage = () => {
     <div className={styles.mainContent}>
       <div className={styles.fakes}>
         <CardsLayout page="home" />
-        <>
+        <div>
           <Link href="/infografica">
             <a>
               <SectionLabel label="infograf" />
             </a>
           </Link>
           <Infografica infographic_id="1" />
-        </>
+        </div>
       </div>
       <div className={styles.media}>
         <YouTubeVideo video_id="2" />
