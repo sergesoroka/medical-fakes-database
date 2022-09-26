@@ -93,7 +93,7 @@ const CardsLayout = ({
   const renderedDataByTag = fakes.map((item, i) => {
     /* @ts-ignore */
 
-    if (item.tags.split(", ").includes(tag)) {
+    if (item.tags && item.tags.split(", ").includes(tag)) {
       /* @ts-ignore */
       if (!uniqueSubthemesByTag.includes(item.subtheme)) {
         uniqueSubthemesByTag.push(item.subtheme);

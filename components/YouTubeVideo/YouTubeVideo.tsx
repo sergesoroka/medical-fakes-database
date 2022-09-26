@@ -10,7 +10,7 @@ const YouTubeVideo = ({ video_id }: { video_id: string }) => {
   const videoRendered = video.map((item, i) => {
     if (video_id == item.video_id) {
       return (
-        <>
+        <div key={item.video_id}>
           {item.video_id && (
             <Link href="/video" >
               <a>
@@ -29,7 +29,7 @@ const YouTubeVideo = ({ video_id }: { video_id: string }) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </>
+        </div>
       );
     }
   });

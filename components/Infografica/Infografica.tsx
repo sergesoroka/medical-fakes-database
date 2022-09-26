@@ -24,7 +24,7 @@ const Infografica = ({ infographic_id }: { infographic_id: string }) => {
         // eslint-disable-next-line @next/next/no-img-element
         // <img src={item.infographic_link} height="373" width="660" alt='infigrafica/>
         // @ts-ignore
-        <div className={styles.imageWrap}>
+        <div className={styles.imageWrap} key={item.infographic_id}>
         <Image
           key={infographic_id}
           src={item.infographic_link}

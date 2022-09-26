@@ -8,6 +8,10 @@ import close from "./../../public/icons/close.svg";
 
 const Header = () => {
   const router = useRouter();
+  const { locale } = router;
+
+  const aboutLabel = locale == 'en' ? 'About' : locale == 'ru' ? 'О проекте' : 'Про Проект'
+  const methodLabel = locale == 'en' ? 'Metodology' : locale == 'ru' ? 'Методология' : 'Методологія'
   return (
     <>
     <LangSwitcher />
@@ -26,8 +30,8 @@ const Header = () => {
         </Link>
         <div className={styles.rightWrap}>
         <div className={styles.linksWrap}>
-        <Link href="/about"><a>Про Проект</a></Link>
-        <Link href="/method"><a>Методологія</a></Link>
+        <Link href="/about"><a>{aboutLabel}</a></Link>
+        <Link href="/method"><a>{methodLabel}</a></Link>
           </div>
         <div className={styles.searchWrap}>
           {router.pathname !== "/search" ? (

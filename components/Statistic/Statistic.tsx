@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Link from "next/link";
-import { fakesData } from "../../data/fakes/fakesData";
+// import { fakesData } from "../../data/fakes/fakesData";
 import styles from "./Statistic.module.scss";
+import useLangSwitcher from "../../utils/langSwitcher";
 
 const Statistic = ({ subtheme }: { subtheme: string }) => {
   const [showAllSourses, setShowAllSourses] = useState<boolean>(false);
-// @ts-ignore
+const { fakes } = useLangSwitcher()
+  // @ts-ignore
   const sources = [];
-  fakesData.map((item) => {
+  // @ts-ignore
+  fakes.map((item) => {
     // @ts-ignore
     if (!sources.includes(item.source) && item.subtheme == subtheme) {
       sources.push(item);

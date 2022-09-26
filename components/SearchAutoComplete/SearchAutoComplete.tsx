@@ -1,12 +1,11 @@
 import useSearchAutoComplete from "./hooks/useSearchAutoComplete";
 import styles from "./SearchAutoComplete.module.scss";
-
+import useLangSwitcher from "../../utils/langSwitcher";
 import CardsLayout from "../Card/CardsLayout";
-import { FiX, FiSearch } from "react-icons/fi";
-// @ts-ignore
-import { fakesData } from "../../data/fakes/fakesData"
+import { FiSearch } from "react-icons/fi";
 
 const SearchAutoComplete = () => {
+  const { fakes } = useLangSwitcher();
   const {
     handleChange,
     handleClick,
@@ -15,7 +14,7 @@ const SearchAutoComplete = () => {
     suggestionsActive,
     suggestionIndex,
     suggestions,
-  } = useSearchAutoComplete({ data: fakesData });
+  } = useSearchAutoComplete({ data: fakes });
 
   return (
     <div className={styles.searchWrap}>

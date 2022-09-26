@@ -2,10 +2,12 @@ import SearchAutoComplete from "../components/SearchAutoComplete/SearchAutoCompl
 import TagsLayout from "../components/Tag/TagsLayout";
 import styles from "./../styles/Search.module.scss";
 
-import { uniqueTags } from '../utils/uniqueTags'
+import useUniqueTags from './../utils/uniqueTags'
 import Tag from './../components/Tag/Tag'
 
 const search = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const {uniqueTags} = useUniqueTags()
   const tagsList = uniqueTags.map((tag, i) => {
     //@ts-ignore
     return <Tag key={i} tag={tag} />;
