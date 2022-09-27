@@ -157,6 +157,7 @@ const Method = () => {
               href="https://www.ifcncodeofprinciples.poynter.org/know-more/the-commitments-of-the-code-of-principles"
               rel="noopener"
               target="_blank"
+              rel="noreferrer"
             >
               Code of Principles
             </a>
@@ -242,6 +243,7 @@ const Method = () => {
               href="https://www.ifcncodeofprinciples.poynter.org/know-more/the-commitments-of-the-code-of-principles"
               rel="noopener"
               target="_blank"
+              rel="noreferrer"
             >
               Кодекса принципов
             </a>
