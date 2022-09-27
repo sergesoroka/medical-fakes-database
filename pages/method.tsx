@@ -155,9 +155,9 @@ const Method = () => {
             VoxCheck is a signatory to the&nbsp;
             <a
               href="https://www.ifcncodeofprinciples.poynter.org/know-more/the-commitments-of-the-code-of-principles"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
-              rel="noreferrer"
+              
             >
               Code of Principles
             </a>
@@ -241,9 +241,9 @@ const Method = () => {
             VoxCheck является подписателем
             <a
               href="https://www.ifcncodeofprinciples.poynter.org/know-more/the-commitments-of-the-code-of-principles"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
-              rel="noreferrer"
+              
             >
               Кодекса принципов
             </a>
