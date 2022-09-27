@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
+import { forwardRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LangSwitcher  from "./LangSwitcher";
+import LangSwitcher from "./LangSwitcher";
 import styles from "./Header.module.scss";
 import search from "./../../public/icons/search.svg";
 import close from "./../../public/icons/close.svg";
@@ -10,17 +12,24 @@ const Header = () => {
   const router = useRouter();
   const { locale } = router;
 
-  const aboutLabel = locale == 'en' ? 'About' : locale == 'ru' ? 'О проекте' : 'Про Проект'
-  const methodLabel = locale == 'en' ? 'Metodology' : locale == 'ru' ? 'Методология' : 'Методологія'
+  const aboutLabel =
+    locale == "en" ? "About" : locale == "ru" ? "О проекте" : "Про Проект";
+  const methodLabel =
+    locale == "en"
+      ? "Metodology"
+      : locale == "ru"
+      ? "Методология"
+      : "Методологія";
   return (
-    <>
-    <LangSwitcher />
+    <div>
+      <LangSwitcher />
       <header className={styles.header}>
-        <Link href="/">
+        <Link href="/" passHref>
           <div className={styles.logo}>
             <p className={styles.voxLogo}>
-            Детокс<br />
-            від пропаганди
+              Детокс
+              <br />
+              від пропаганди
             </p>
             <p className={styles.projectLogo}>
               База даних <br />
@@ -29,35 +38,44 @@ const Header = () => {
           </div>
         </Link>
         <div className={styles.rightWrap}>
-        <div className={styles.linksWrap}>
-        <Link href="/about"><a>{aboutLabel}</a></Link>
-        <Link href="/method"><a>{methodLabel}</a></Link>
+          <div className={styles.linksWrap}>
+            <Link href="/about" passHref>
+              <a>{aboutLabel}</a>
+            </Link>
+            <Link href="/method" passHref>
+              <a>{methodLabel}</a>
+            </Link>
           </div>
-        <div className={styles.searchWrap}>
-          {router.pathname !== "/search" ? (
-            <Link href="/search">
-              <Image
-                src={search}
-                height="48"
-                width="48"
-                alt="Search icon"
-                style={{ cursor: "pointer" }}
-              />
-            </Link>
-          ) : (
-            <Link href="/">
-              <Image
-                src={close}
-                height="48"
-                width="48"
-                alt="Close icon"
-                style={{ cursor: "pointer" }}
-              />
-            </Link>
-          )}
-        </div></div>
+          <div className={styles.searchWrap}>
+            {router.pathname !== "/search" ? (
+              <Link href="/search" passHref>
+                <a>
+                  <Image
+                    src={search}
+                    height="48"
+                    width="48"
+                    alt="Search icon"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              </Link>
+            ) : (
+              <Link href="/" passHref>
+                <a>
+                  <Image
+                    src={close}
+                    height="48"
+                    width="48"
+                    alt="Close icon"
+                    style={{ cursor: "pointer" }}
+                  />
+                </a>
+              </Link>
+            )}
+          </div>
+        </div>
       </header>
-    </>
+    </div>
   );
 };
 
