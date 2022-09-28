@@ -6,6 +6,21 @@ const GoogleAnalitics = () => {
   return (
     <>
       <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-54527150-1"
+      />
+
+      <Script id="google-analitic">
+        {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-54527150-1');
+      `}
+      </Script>
+
+      <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=UA-54527150-1"
       />
@@ -27,4 +42,3 @@ const GoogleAnalitics = () => {
 };
 
 export default GoogleAnalitics;
-
