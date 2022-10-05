@@ -39,18 +39,24 @@ $primary-color: #3F4871;
 .disclaimWord {
   font-weight: 600;
 }
-
+.logosWrap {
+  display: flex;
+  justify-content: space-between;
+}
 @media (max-width: 600px) {
   .footer {
-    height: 640px;
+    height: 426px;
+    margin-bottom: 80px;
+
   }
-  .icons {
-    display: block;
-  }
+  
   .disclaimWrap {
     display: block;
   }
-
+  .logosWrap {
+    display: flex;
+    justify-content: space-between;
+  }
   .disclaim {
     width: 100%;
   }

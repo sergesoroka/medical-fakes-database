@@ -1,8 +1,8 @@
-$primary-color: #3F4871;
-
+$primary-color: #3f4871;
 
 .container {
   padding: 1rem 3rem 3rem 3rem;
+  width: 100% !important;
 }
 
 .aboutPage {
@@ -10,15 +10,15 @@ $primary-color: #3F4871;
   font-weight: 200;
   font-size: 1.2rem;
   line-height: 2rem;
-  color: #3F4871;
+  color: #3f4871;
   width: 60%;
 }
 .aboutPageTitle {
   font-size: 36px;
   font-weight: 200;
   line-height: 50px;
-  color: #3F4871;
-  border-bottom: 2px solid #3F4871;
+  color: #3f4871;
+  border-bottom: 2px solid #3f4871;
   padding-bottom: 1rem;
 }
 
@@ -46,15 +46,16 @@ $primary-color: #3F4871;
   font-weight: 200;
   font-size: 1.4rem;
   line-height: 2rem;
-  color: #3F4871;
+  color: #3f4871;
 }
 .infoPage {
   display: grid;
   grid-template-columns: auto auto;
   gap: 2rem;
-  margin-top: 2rem
+  margin-top: 2rem;
 }
-.videoPageWrap, .articlesPage {
+.videoPageWrap,
+.articlesPage {
   margin-top: 2rem;
 }
 .videoPage {
@@ -64,7 +65,7 @@ $primary-color: #3F4871;
   margin-top: 2rem;
 }
 .singlePageArticlesWrap {
- margin: 0;
+  margin: 0;
 }
 .articlesWrap {
   display: grid;
@@ -78,18 +79,21 @@ $primary-color: #3F4871;
   color: #4a4a4a;
   margin-bottom: 4rem;
 }
-.textDiscript > p > a, .textDiscript > div > p > a > em,  .textDiscript > ul > li > a {
+.textDiscript > p > a,
+.textDiscript > div > p > a > em,
+.textDiscript > ul > li > a {
   color: #0050ad !important;
 }
-.textDiscript > p > a:hover, .textDiscript > ul > li > a:hover {
+.textDiscript > p > a:hover,
+.textDiscript > ul > li > a:hover {
   color: #002a5a !important;
 }
 .subtheme {
   font-size: 36px;
   font-weight: 200;
   line-height: 50px;
-  color: #3F4871;
-  border-bottom: 2px solid #3F4871;
+  color: #3f4871;
+  border-bottom: 2px solid #3f4871;
   padding-bottom: 1rem;
   margin: 0 0 1rem 4rem;
 }
@@ -97,26 +101,25 @@ $primary-color: #3F4871;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  color: #3F4871;
+  color: #3f4871;
   text-transform: uppercase;
   margin-left: 0.4rem;
   width: 50%;
-
 }
 .verdict {
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #D12020;
-  margin: .3rem 0 0 1rem;
+  color: #d12020;
+  margin: 0.3rem 0 0 1rem;
 }
 
 .proof {
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #008A40;
-  margin: .4rem 0 0 1rem;
+  color: #008a40;
+  margin: 0.4rem 0 0 1rem;
 }
 
 .verdictWrap {
@@ -134,18 +137,16 @@ $primary-color: #3F4871;
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #A6E1FA;
-  
+  border-left: 15px solid #a6e1fa;
 }
 .wordTheme {
   height: 30px;
-    background-color: #A6E1FA;
-    font-weight: 600;
-    padding: 6px;
-    cursor: pointer;
+  background-color: #a6e1fa;
+  font-weight: 600;
+  padding: 6px;
+  cursor: pointer;
 }
 // end of single page styles
-
 
 .main {
   min-height: 100vh;
@@ -185,7 +186,7 @@ $primary-color: #3F4871;
   text-transform: uppercase;
   font-size: 1.4rem;
   color: $primary-color;
- margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 .underline {
   width: 310px;
@@ -194,8 +195,6 @@ $primary-color: #3F4871;
   display: inline-block;
   margin-bottom: 3rem;
 }
-
-
 
 .description {
   margin: 4rem 0;
@@ -219,7 +218,6 @@ $primary-color: #3F4871;
   flex-wrap: wrap;
   max-width: 800px;
 }
-
 
 .card {
   margin: 1rem;
@@ -267,11 +265,21 @@ $primary-color: #3F4871;
   }
   .container {
     padding: 1rem;
+    width: 172% !important;
   }
   .mainContent {
     display: grid;
     grid-template-columns: 1fr;
-    padding: .6rem;
-  margin-top: 3rem;
+    padding: 0.6rem;
+    margin-top: 3rem;
+  }
+
+  .singlePageMainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 1rem;
+  }
+  .singlePageWrap {
+    margin-right: 2rem;
   }
 }

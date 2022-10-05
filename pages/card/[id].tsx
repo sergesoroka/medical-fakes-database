@@ -97,7 +97,7 @@ function CartPage() {
     }
   });
 
-  return <div>{renderedPage}</div>;
+  return <div className={styles.singlePageWrap}>{renderedPage}</div>;
 }
 
 export default CartPage;

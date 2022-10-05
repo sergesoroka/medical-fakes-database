@@ -37,6 +37,7 @@ $primary-color: #3F4871;
 
 .rightWrap, .linksWrap {
   display: flex;
+  justify-content: space-between;
 }
 
 .linksWrap a {
@@ -79,7 +80,17 @@ $primary-color: #3F4871;
   .projectLogo {
     font-size: 1.6rem;
     line-height: 1.8rem;
-    margin: 0;
+    margin: 0.4rem 0;
+  }
+  .header {
+    display: block;
+  }
+  .linksWrap {
+    display: block;
+    margin: 1rem 0;
+  }
+  .linksWrap a {
+    margin-left: 0;
   }
 }
 

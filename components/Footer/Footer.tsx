@@ -24,12 +24,13 @@ const Footer = () => {
           Великої Британії, несе виключно компанія ТОВ «Делойт Консалтинг» в
           рамках контракту №72012118C00001.
         </p>
+        <div className={styles.logosWrap}>
         <div style={{ height: "20px", width: '175px', marginTop: "20px" }}>
           <Image src={voxCheckLogo} height="20" width="175" alt="Logo VoxCheck" />
         </div>
         <div style={{ height: "87px", width: '151px' }}>
         <Image src={usaid_logo} height="87" width="151" alt="Logo USAID" />
-        </div>
+        </div></div>
         
       </div>
       <div className={styles.copyrightIconsWrap}>
