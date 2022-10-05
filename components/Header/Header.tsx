@@ -22,7 +22,7 @@ const Header = () => {
       : "Методологія";
   return (
     <div>
-      <LangSwitcher />
+      {/* <LangSwitcher /> */}
       <header className={styles.header}>
         <Link href="/" passHref>
           <div className={styles.logo}>
