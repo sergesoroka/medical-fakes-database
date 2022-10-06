@@ -19,19 +19,24 @@ const Footer = () => {
           міжнародного розвитку (USAID), наданої від імені народу Сполучених
           Штатів Америки, за підтримки Програми Уряду Великої Британії «Good
           Governance Fund», наданої від імені народу Великої Британії.
-          Відповідальність за зміст цієї бази, який необов&apos;язково відображає
-          погляди USAID, Уряду Сполучених Штатів Америки, UK aid або Уряду
-          Великої Британії, несе виключно компанія ТОВ «Делойт Консалтинг» в
-          рамках контракту №72012118C00001.
+          Відповідальність за зміст цієї бази, який необов&apos;язково
+          відображає погляди USAID, Уряду Сполучених Штатів Америки, UK aid або
+          Уряду Великої Британії, несе виключно компанія ТОВ «Делойт Консалтинг»
+          в рамках контракту №72012118C00001.
         </p>
         <div className={styles.logosWrap}>
-        <div style={{ height: "20px", width: '175px', marginTop: "20px" }}>
-          <Image src={voxCheckLogo} height="20" width="175" alt="Logo VoxCheck" />
+          <div style={{ height: "20px", width: "175px", marginTop: "20px" }}>
+            <Image
+              src={voxCheckLogo}
+              height="20"
+              width="175"
+              alt="Logo VoxCheck"
+            />
+          </div>
+          <div style={{ height: "87px", width: "151px" }}>
+            <Image src={usaid_logo} height="87" width="151" alt="Logo USAID" />
+          </div>
         </div>
-        <div style={{ height: "87px", width: '151px' }}>
-        <Image src={usaid_logo} height="87" width="151" alt="Logo USAID" />
-        </div></div>
-        
       </div>
       <div className={styles.copyrightIconsWrap}>
         <div className={styles.copyright}>VoxUkraine © 2022</div>
