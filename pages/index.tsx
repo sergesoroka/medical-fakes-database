@@ -17,6 +17,11 @@ const Home: NextPage = () => {
   return (
     <div className={styles.mainContent}>
       <div className={styles.fakes}>
+      <Link href="/themes">
+            <a>
+              <SectionLabel label="fakes" />
+            </a>
+          </Link>
       {data 
         ? data.items.slice(0, 160).map((item, i) => {
             if (!uniqueSubthemes.includes(item.subtheme)) {

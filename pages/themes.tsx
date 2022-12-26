@@ -6,23 +6,14 @@ import ThemeItem from "../components/theme/ThemeItem";
 import useLangSwitcher from "../utils/langSwitcher";
 import Head from "next/head";
 
-import { useState, useEffect } from "react";
+import { useGetFakesQuery } from "../store/api";
 
 const Theme = () => {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("https://apex.oracle.com/pls/apex/sergespace/fakes_ua/?limit=1200")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
 
-  const { fakes } = useLangSwitcher();
+  const { data } = useGetFakesQuery("fakes_ua/?limit=1200");
+
+
   /* @ts-ignore */
   const themesUnique = [];
   if (data) {
