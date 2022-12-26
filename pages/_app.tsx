@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Provider } from "react-redux";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 import { store } from "./../store/store";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
@@ -7,11 +8,13 @@ import GoogleAnalitics from "../utils/GoogleAnalitics";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import styles from "../styles/Home.module.scss";
+import { fakesApi } from "../store/api";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     
     <Provider store={store}>
+      <ApiProvider api={fakesApi}>
       <Head>
         <title>Detox від пропаганди</title>
         <meta name="next-head-count" content="3" />
@@ -36,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </div>
+      </ApiProvider>
     </Provider>
   );
 }

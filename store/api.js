@@ -1,13 +1,15 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const fakesApi = createApi({
-  reducerPath: 'fakesApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://medfakes-cms.herokuapp.com/' }),
+  reducerPath: "fakesApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://apex.oracle.com/pls/apex/sergespace/",
+  }),
   endpoints: (builder) => ({
-    getFakesByName: builder.query({
-      query: (name) => `api/${name}`,
+    getFakes: builder.query({
+      query: (name) => name,
     }),
   }),
-})
+});
 
-export const { useGetFakesByNameQuery } = fakesApi
+export const { useGetFakesQuery } = fakesApi;

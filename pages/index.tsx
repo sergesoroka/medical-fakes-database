@@ -6,13 +6,35 @@ import YouTubeVideo from "../components/YouTubeVideo/YouTubeVideo";
 import Infografica from "../components/Infografica/Infografica";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 import Link from "next/link";
+import { useGetFakesQuery } from "../store/api";
+import Card from "../components/Card/Card";
+
+
 
 const Home: NextPage = () => {
-  // const vox_article_id: string[] = articlesData.slice(0, 2).map(item => item.vox_article_id)
+  const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
+  const uniqueSubthemes: string[] = [];
   return (
     <div className={styles.mainContent}>
       <div className={styles.fakes}>
-        <CardsLayout page="home" />
+      {data 
+        ? data.items.slice(0, 160).map((item, i) => {
+            if (!uniqueSubthemes.includes(item.subtheme)) {
+              uniqueSubthemes.push(item.subtheme);
+
+              return (
+                <Card
+                  key={i}
+                  id={item.id}
+                  source={item.source}
+                  theme={item.theme}
+                  subtheme={item.subtheme}
+                  tags={item.tags}
+                />
+              );
+            }
+          })
+        : "loading..."}
         <div>
           <Link href="/infografica">
             <a>

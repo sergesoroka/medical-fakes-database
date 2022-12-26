@@ -6,6 +6,8 @@ import Card from "./Card";
 import SectionLabel from "../SectionLabel/SectionLabel";
 import useLangSwitcher from "../../utils/langSwitcher";
 
+import { useState, useEffect } from "react";
+
 const CardsLayout = ({
   suggestions,
   suggestionIndex,
@@ -24,6 +26,17 @@ const CardsLayout = ({
   const router = useRouter();
 
   const { fakes } = useLangSwitcher();
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://apex.oracle.com/pls/apex/sergespace/fakes_ua/?limit=1200")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+
   const uniqueSubthemes: string[] = [];
   /* @ts-ignore */
   const homePageRenderedData = fakes.slice(0, 80).map((item, i) => {
@@ -143,10 +156,51 @@ const CardsLayout = ({
         </Link>
       ) : null}
 
-      {page === "tag" ? renderedDataByTag : null}
+      {data && page === "tag" ? 
+      
+      data.items.map((item, i) => {
+        /* @ts-ignore */
+    
+        if (item.tags && item.tags.split(", ").includes(tag)) {
+          /* @ts-ignore */
+          if (!uniqueSubthemesByTag.includes(item.subtheme)) {
+            uniqueSubthemesByTag.push(item.subtheme);
+            return (
+              <Card
+                key={i}
+                id={item.id}
+                source={item.source}
+                theme={item.theme}
+                subtheme={item.subtheme}
+                tags={item.tags}
+              />
+            );
+          }
+        }
+      })
+
+      
+      : 'loading...'}
       {router.asPath === "/fakes" ? allFakesPageRenderedData : null}
       {suggestions ? renderedSearchData : null}
-      {page === "home" ? homePageRenderedData : null}
+      {data && router.asPath === "/"
+        ? data.items.slice(0, 160).map((item, i) => {
+            if (!uniqueSubthemes.includes(item.subtheme)) {
+              uniqueSubthemes.push(item.subtheme);
+
+              return (
+                <Card
+                  key={i}
+                  id={item.id}
+                  source={item.source}
+                  theme={item.theme}
+                  subtheme={item.subtheme}
+                  tags={item.tags}
+                />
+              );
+            }
+          })
+        : "loading..."}
       {page === "themePage" ? renderedForThemePage : null}
     </div>
   );

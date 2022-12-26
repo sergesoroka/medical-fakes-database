@@ -4,8 +4,11 @@ import useLangSwitcher from "../../utils/langSwitcher";
 import CardsLayout from "../Card/CardsLayout";
 import { FiSearch } from "react-icons/fi";
 
+import { useGetFakesQuery } from "../../store/api";
+
 const SearchAutoComplete = () => {
   const { fakes } = useLangSwitcher();
+  const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
   const {
     handleChange,
     handleClick,
