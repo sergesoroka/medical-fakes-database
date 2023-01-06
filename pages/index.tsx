@@ -10,7 +10,7 @@ import { useGetFakesQuery } from "../store/api";
 import Card from "../components/Card/Card";
 
 const Home: NextPage = () => {
-  const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
+  const { data } = useGetFakesQuery('fakes_ua/?limit=1600')
   const uniqueSubthemes: string[] = [];
   return (
     <div className={styles.mainContent}>

@@ -8,7 +8,7 @@ import { useGetFakesQuery } from "../../store/api";
 
 const SearchAutoComplete = () => {
   const { fakes } = useLangSwitcher();
-  const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
+  const { data } = useGetFakesQuery('fakes_ua/?limit=1600')
   const {
     handleChange,
     handleClick,

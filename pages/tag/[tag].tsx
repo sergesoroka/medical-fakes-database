@@ -4,7 +4,7 @@ import { useGetFakesQuery } from "../../store/api";
 import styles from "./../../styles/TagPage.module.scss";
 
 const TagPage = () => {
-  const { data } = useGetFakesQuery("fakes_ua/?limit=1200");
+  const { data } = useGetFakesQuery("fakes_ua/?limit=1600");
   const router = useRouter();
   const { tag } = router.query;
 
