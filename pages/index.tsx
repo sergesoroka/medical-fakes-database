@@ -1,15 +1,13 @@
 import { NextPage } from "next";
 import VoxArticlesLayout from "../components/VoxArticles/VoxArticlesLayout";
 import styles from "../styles/Home.module.scss";
-import CardsLayout from "../components/Card/CardsLayout";
+import Loader from "../components/Loader/Loader";
 import YouTubeVideo from "../components/YouTubeVideo/YouTubeVideo";
 import Infografica from "../components/Infografica/Infografica";
 import SectionLabel from "../components/SectionLabel/SectionLabel";
 import Link from "next/link";
 import { useGetFakesQuery } from "../store/api";
 import Card from "../components/Card/Card";
-
-
 
 const Home: NextPage = () => {
   const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
@@ -39,7 +37,7 @@ const Home: NextPage = () => {
               );
             }
           })
-        : "loading..."}
+        : <Loader />}
         <div>
           <Link href="/infografica">
             <a>

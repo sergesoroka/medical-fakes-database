@@ -13,7 +13,7 @@ import Link from "next/link";
 import { useGetFakesQuery } from "../../store/api";
 
 function CartPage() {
-  const { data } = useGetFakesQuery('fakes_ua/?limit=1200')
+  const { data } = useGetFakesQuery('fakes_ua/?limit=1600')
   const router = useRouter();
   const { id } = router.query;
   const { locale } = router;
