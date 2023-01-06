@@ -17,7 +17,7 @@ const SearchAutoComplete = () => {
     suggestionsActive,
     suggestionIndex,
     suggestions,
-  } = useSearchAutoComplete({ data });
+  } = useSearchAutoComplete({ data: data.items });
 
   return (
     <div className={styles.searchWrap}>
