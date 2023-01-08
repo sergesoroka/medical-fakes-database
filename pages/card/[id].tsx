@@ -5,6 +5,7 @@ import TagsLayout from "../../components/Tag/TagsLayout";
 import Infografica from "../../components/Infografica/Infografica";
 import YouTubeVideo from "../../components/YouTubeVideo/YouTubeVideo";
 import VoxArticlesLayout from "../../components/VoxArticles/VoxArticlesLayout";
+import Loader from "../../components/Loader/Loader";
 import { FaHandPointUp, FaThumbsUp } from "react-icons/fa";
 
 import SectionLabel from "../../components/SectionLabel/SectionLabel";
@@ -102,7 +103,7 @@ function CartPage() {
               );
             }
           })
-        : "loading..."}
+        : <Loader/>}
     </div>
   );
 }

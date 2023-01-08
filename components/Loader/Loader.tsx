@@ -21,7 +21,7 @@ const Loader = () => {
         width: "100%",
         height: "50%",
         color: "#3F4871",
-        fontSize: "2rem",
+        fontSize: "1rem",
       }}
     >
       {loading}

@@ -2,6 +2,7 @@ import React from "react";
 import Article from "./Article";
 import styles from "./VoxArticles.module.css";
 import { useGetFakesQuery } from "../../store/api";
+import Loader from "../Loader/Loader";
 
 const VoxArticlesLayout = ({ vox_article_id }: { vox_article_id: string }) => {
   const { data } = useGetFakesQuery("articles_ua/");
@@ -22,7 +23,7 @@ const VoxArticlesLayout = ({ vox_article_id }: { vox_article_id: string }) => {
               );
             }
           })
-        : "Loading"}
+        : <Loader/>}
     </div>
   );
 };

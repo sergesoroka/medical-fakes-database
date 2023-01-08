@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 const useSearchAutoComplete = ({ data }) => {
   const [suggestions, setSuggestions] = useState([]);
@@ -6,10 +6,10 @@ const useSearchAutoComplete = ({ data }) => {
   const [suggestionsActive, setSuggestionsActive] = useState(false);
   const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const query = e.target.value.toLowerCase();
     setValue(query);
-    if (data && query.length  > 1) {
+    if (data && query.length > 1) {
       const filterSuggestionsTheme = data.items
         .map((item) => item.theme)
         .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
@@ -22,7 +22,25 @@ const useSearchAutoComplete = ({ data }) => {
     } else {
       setSuggestionsActive(false);
     }
-  };
+  }, [data]);
+
+  // const handleChange = (e) => {
+  //   const query = e.target.value.toLowerCase();
+  //   setValue(query);
+  //   if (data && query.length  > 1) {
+  //     const filterSuggestionsTheme = data.items
+  //       .map((item) => item.theme)
+  //       .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
+  //     const filterSuggestionsSubTheme = data.items
+  //       .map((item) => item.subtheme)
+  //       .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
+
+  //     setSuggestions([...filterSuggestionsTheme, ...filterSuggestionsSubTheme]);
+  //     setSuggestionsActive(true);
+  //   } else {
+  //     setSuggestionsActive(false);
+  //   }
+  // };
 
   const handleClick = (e) => {
     setSuggestions([]);
@@ -31,8 +49,8 @@ const useSearchAutoComplete = ({ data }) => {
   };
 
   const handleClear = () => {
-    setValue("")
-    setSuggestions([])
+    setValue("");
+    setSuggestions([]);
   };
 
   return {
