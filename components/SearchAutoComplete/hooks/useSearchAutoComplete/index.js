@@ -9,11 +9,11 @@ const useSearchAutoComplete = ({ data }) => {
   const handleChange = (e) => {
     const query = e.target.value.toLowerCase();
     setValue(query);
-    if (query.length > 1) {
-      const filterSuggestionsTheme = data
+    if (data && query.length  > 1) {
+      const filterSuggestionsTheme = data.items
         .map((item) => item.theme)
         .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
-      const filterSuggestionsSubTheme = data
+      const filterSuggestionsSubTheme = data.items
         .map((item) => item.subtheme)
         .filter((suggestion) => suggestion.toLowerCase().indexOf(query) > -1);
 

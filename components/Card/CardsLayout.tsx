@@ -156,35 +156,56 @@ const CardsLayout = ({
         </Link>
       ) : null}
 
-      {data && page === "tag" ? 
-      
-      data.items.map((item, i) => {
-        /* @ts-ignore */
-    
-        if (item.tags && item.tags.split(", ").includes(tag)) {
-          /* @ts-ignore */
-          if (!uniqueSubthemesByTag.includes(item.subtheme)) {
-            uniqueSubthemesByTag.push(item.subtheme);
-            return (
-              <Card
-                key={i}
-                id={item.id}
-                source={item.source}
-                theme={item.theme}
-                subtheme={item.subtheme}
-                tags={item.tags}
-              />
-            );
-          }
-        }
-      })
+      {data && page === "tag"
+        ? data.items.map((item, i) => {
+            /* @ts-ignore */
 
-      
-      : 'loading...'}
+            if (item.tags && item.tags.split(", ").includes(tag)) {
+              /* @ts-ignore */
+              if (!uniqueSubthemesByTag.includes(item.subtheme)) {
+                uniqueSubthemesByTag.push(item.subtheme);
+                return (
+                  <Card
+                    key={i}
+                    id={item.id}
+                    source={item.source}
+                    theme={item.theme}
+                    subtheme={item.subtheme}
+                    tags={item.tags}
+                  />
+                );
+              }
+            }
+          })
+        : null}
       {router.asPath === "/fakes" ? allFakesPageRenderedData : null}
-      {suggestions ? renderedSearchData : null}
+      {data && suggestions
+        ? data.items.map((item, i) => {
+            /* @ts-ignore */
+            if (!uniqueSearch.includes(item.subtheme)) {
+              uniqueSearch.push(item.subtheme);
+              if (item.theme && suggestions) {
+                if (
+                  suggestions.includes(item.theme) ||
+                  suggestions.includes(item.subtheme)
+                ) {
+                  return (
+                    <Card
+                      key={i}
+                      id={item.id}
+                      source={item.source}
+                      theme={item.theme}
+                      subtheme={item.subtheme}
+                      tags={item.tags}
+                    />
+                  );
+                }
+              }
+            }
+          })
+        : null}
       {data && router.asPath === "/"
-        ? data.items.slice(0, 160).map((item, i) => {
+        ? data.items.slice(0, 16).map((item, i) => {
             if (!uniqueSubthemes.includes(item.subtheme)) {
               uniqueSubthemes.push(item.subtheme);
 
@@ -200,7 +221,7 @@ const CardsLayout = ({
               );
             }
           })
-        : "loading..."}
+        : null}
       {page === "themePage" ? renderedForThemePage : null}
     </div>
   );
